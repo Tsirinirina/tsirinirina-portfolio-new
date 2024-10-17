@@ -45,7 +45,7 @@ export function DropdownUi({
 
 const LabelWrapper: React.FC<any> = React.forwardRef(
   ({ children, ...props }, ref) => (
-    <div ref={ref} {...props} className={style.labelWrapper}>
+    <div ref={ref as any} {...props} className={style.labelWrapper}>
       {children}
     </div>
   )
