@@ -1,0 +1,8 @@
+.icon {
+  transition: color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+  color: #007bff; /* Example hover color */
+  transform: scale(1.1);
+}

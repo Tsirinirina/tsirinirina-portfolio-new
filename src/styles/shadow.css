@@ -1,0 +1,46 @@
+:root {
+  /* Shadow Sizes */
+  --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+  /* Shadow Colors */
+  --shadow-primary: rgba(0, 123, 255, 0.5);
+  --shadow-secondary: rgba(108, 117, 125, 0.5);
+  --shadow-danger: rgba(220, 53, 69, 0.5);
+  --shadow-success: rgba(40, 167, 69, 0.5);
+  --shadow-warning: rgba(255, 193, 7, 0.5);
+  --shadow-info: rgba(23, 162, 184, 0.5);
+  --shadow-light: rgba(248, 249, 250, 0.5);
+  --shadow-dark: rgba(52, 58, 64, 0.5);
+
+  /* Combined Shadow Variables */
+  --shadow-primary-sm: var(--shadow-sm) var(--shadow-primary);
+  --shadow-primary-md: var(--shadow-md) var(--shadow-primary);
+  --shadow-primary-lg: var(--shadow-lg) var(--shadow-primary);
+
+  --shadow-secondary-sm: var(--shadow-sm) var(--shadow-secondary);
+  --shadow-secondary-md: var(--shadow-md) var(--shadow-secondary);
+  --shadow-secondary-lg: var(--shadow-lg) var(--shadow-secondary);
+
+  --shadow-danger-sm: var(--shadow-sm) var(--shadow-danger);
+  --shadow-danger-md: var(--shadow-md) var(--shadow-danger);
+  --shadow-danger-lg: var(--shadow-lg) var(--shadow-danger);
+
+  --shadow-success-sm: var(--shadow-sm) var(--shadow-success);
+  --shadow-success-md: var(--shadow-md) var(--shadow-success);
+  --shadow-success-lg: var(--shadow-lg) var(--shadow-success);
+
+  --shadow-light-sm: var(--shadow-sm) var(--shadow-light);
+  --shadow-light-md: var(--shadow-md) var(--shadow-light);
+  --shadow-light-lg: var(--shadow-lg) var(--shadow-light);
+
+  --shadow-dark-sm: var(--shadow-sm) var(--shadow-dark);
+  --shadow-dark-md: var(--shadow-md) var(--shadow-dark);
+  --shadow-dark-lg: var(--shadow-lg) var(--shadow-dark);
+
+  /* Rounded Shadows */
+  --shadow-rounded-sm: 0px 1px 3px var(--shadow-primary);
+  --shadow-rounded-md: 0px 5px 10px var(--shadow-secondary);
+  --shadow-rounded-lg: 0px 15px 30px var(--shadow-dark);
+}

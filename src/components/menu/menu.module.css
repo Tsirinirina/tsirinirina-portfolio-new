@@ -1,0 +1,24 @@
+.linkContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.linkItem {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  color: var(--menu-link-color);
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.linkItem:hover {
+  color: var(--menu-link-color);
+  background-color: var(--menu-link-color-hover);
+  transition: 0.4s ease-in;
+}

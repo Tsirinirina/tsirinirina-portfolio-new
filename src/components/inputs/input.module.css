@@ -1,0 +1,82 @@
+.inputField {
+  width: 100%;
+}
+
+.inputContainerError {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: var(--b-gray-sm);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  height: 40px;
+  outline: none;
+  background: var(--background);
+  color: var(--dark);
+}
+
+[data-theme="dark"] .input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: var(--b-gray-sm);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  height: 40px;
+  outline: none;
+  background: var(--background);
+  color: var(--light);
+}
+
+.inputError {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--danger-bg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  height: 40px;
+  outline: none;
+}
+
+.error {
+  color: var(--danger-bg);
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.icon:hover {
+  background: var(--gray-hover);
+  border-radius: 5px;
+}

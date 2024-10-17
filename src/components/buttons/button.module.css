@@ -1,0 +1,191 @@
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.default {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.default:hover {
+  background-color: var(--light-hover);
+}
+
+.default:disabled {
+  background-color: var(--light-hover);
+  cursor: none;
+}
+
+[data-theme="dark"] .default {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+.primary:hover {
+  background-color: var(--primary-hover-bg);
+}
+
+.primary:disabled {
+  background-color: var(--primary-hover-bg);
+  cursor: none;
+}
+
+.secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+}
+
+.secondary:hover {
+  background-color: var(--secondary-hover-bg);
+}
+
+.secondary:disabled {
+  background-color: var(--secondary-hover-bg);
+  cursor: none;
+}
+
+.tertiary {
+  background-color: var(--tertiary-bg);
+  color: var(--tertiary-color);
+}
+
+.tertiary:hover {
+  background-color: var(--tertiary-hover-bg);
+}
+
+.tertiary:disabled {
+  background-color: var(--tertiary-hover-bg);
+  cursor: none;
+}
+
+.warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+}
+
+.warning:hover {
+  background-color: var(--warning-hover-bg);
+}
+
+.warning:disabled {
+  background-color: var(--warning-hover-bg);
+  cursor: none;
+}
+
+.danger {
+  background-color: var(--danger-bg);
+  color: var(--danger-color);
+}
+
+.danger:hover {
+  background-color: var(--danger-hover-bg);
+}
+
+.danger:disabled {
+  background-color: var(--danger-hover-bg);
+  cursor: none;
+}
+
+.success {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+}
+
+.success:hover {
+  background-color: var(--success-hover-bg);
+}
+
+.success:disabled {
+  background-color: var(--success-hover-bg);
+  cursor: none;
+}
+
+/* Outline styles */
+
+.outlineDefault {
+  border: 2px solid var(--dark);
+  background-color: var(--light);
+  color: var(--dark);
+}
+.outlineDefault:hover {
+  border: 2px solid var(--dark-hover);
+  background-color: var(--light-hover);
+  color: var(--dark-hover);
+}
+
+.outlinePrimary {
+  border: 2px solid var(--primary-bg);
+  background-color: var(--white);
+  color: var(--primary-bg);
+}
+
+.outlinePrimary:hover {
+  background-color: var(--primary-hover-bg);
+  color: var(--primary-color);
+}
+
+.outlineSecondary {
+  border: 2px solid var(--secondary-bg);
+  background-color: var(--white);
+  color: var(--secondary-bg);
+}
+
+.outlineSecondary:hover {
+  background-color: var(--secondary-hover-bg);
+  color: var(--secondary-color);
+}
+
+.outlineTertiary {
+  border: 2px solid var(--tertiary-bg);
+  background-color: var(--white);
+  color: var(--tertiary-bg);
+}
+
+.outlineTertiary:hover {
+  background-color: var(--tertiary-hover-bg);
+  color: var(--tertiary-color);
+}
+
+.outlineWarning {
+  border: 2px solid var(--warning-bg);
+  background-color: var(--white);
+  color: var(--warning-bg);
+}
+
+.outlineWarning:hover {
+  background-color: var(--warning-hover-bg);
+  color: var(--warning-color);
+}
+
+.outlineDanger {
+  border: 2px solid var(--danger-bg);
+  background-color: var(--white);
+  color: var(--danger-bg);
+}
+
+.outlineDanger:hover {
+  background-color: var(--danger-hover-bg);
+  color: var(--danger-color);
+}
+
+.outlineSuccess {
+  border: 2px solid var(--success-bg);
+  background-color: var(--white);
+  color: var(--success-bg);
+}
+
+.outlineSuccess:hover {
+  background-color: var(--success-hover-bg);
+  color: var(--success-color);
+}

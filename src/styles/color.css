@@ -1,0 +1,85 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --light: #f3f4f6;
+  --light-hover: #e0e0e0;
+  --dark: #474e58;
+  --dark-hover: #2a3442;
+  --gray: #ccc;
+  --gray-hover: #d8d8d8;
+
+  --primary-bg: #007bff;
+  --primary-hover-bg: #0056b3;
+  --primary-color: var(--white);
+
+  --secondary-bg: #6c757d;
+  --secondary-hover-bg: #5a6268;
+  --secondary-color: var(--white);
+
+  --tertiary-bg: #3281e7;
+  --tertiary-hover-bg: #3e83dd;
+  --tertiary-color: var(--white);
+
+  --warning-bg: #ffc107;
+  --warning-hover-bg: #e0a800;
+  --warning-color: var(--dark);
+
+  --danger-bg: #dc3545;
+  --danger-hover-bg: #c82333;
+  --danger-color: var(--white);
+
+  --success-bg: #28a745;
+  --success-hover-bg: #218838;
+  --success-color: var(--white);
+
+  --menu-link-bg: var(--primary-bg);
+  --menu-link-hover-bg: var(--primary-hover-bg);
+  --menu-link-color: var(--dark);
+  --menu-link-color-hover: var(--light-hover);
+
+  --background: var(--light);
+  --foreground: var(--dark);
+}
+
+[data-theme="dark"] {
+  --white: #fff;
+  --black: #000;
+  --light: #e0e0e0;
+  --light-hover: #b0b0b0;
+  --dark: #7d8591;
+  --dark-hover: #2a3442;
+  --gray: #ccc;
+  --gray-hover: #d8d8d8;
+
+  --primary-bg: #007bff;
+  --primary-hover-bg: #0056b3;
+  --primary-color: var(--white);
+
+  --secondary-bg: #6c757d;
+  --secondary-hover-bg: #5a6268;
+  --secondary-color: var(--white);
+
+  --tertiary-bg: #3281e7;
+  --tertiary-hover-bg: #3e83dd;
+  --tertiary-color: var(--white);
+
+  --warning-bg: #ffc107;
+  --warning-hover-bg: #e0a800;
+  --warning-color: var(--dark);
+
+  --danger-bg: #dc3545;
+  --danger-hover-bg: #c82333;
+  --danger-color: var(--white);
+
+  --success-bg: #28a745;
+  --success-hover-bg: #218838;
+  --success-color: var(--white);
+
+  --menu-link-bg: var(--primary-bg);
+  --menu-link-hover-bg: var(--primary-hover-bg);
+  --menu-link-color: var(--light);
+  --menu-link-color-hover: var(--dark-hover);
+
+  --background: var(--dark);
+  --foreground: var(--light);
+}

@@ -1,0 +1,52 @@
+:root {
+  /* Gap Variables */
+  --gap-sm: 5px;
+  --gap-md: 15px;
+  --gap-lg: 20px;
+  --gap-xl: 40px;
+  --gap-xxl: 80px;
+
+  /* Padding Variables */
+  --padding-xs: 3px;
+  --padding-sm: 5px;
+  --padding-md: 10px;
+  --padding-lg: 15px;
+  --padding-xl: 20px;
+  --padding-xxl: 30px;
+
+  /* Padding X (Horizontal) and Y (Vertical) */
+  --padding-x-sm: 5px;
+  --padding-x-md: 10px;
+  --padding-x-lg: 15px;
+  --padding-y-sm: 5px;
+  --padding-y-md: 10px;
+  --padding-y-lg: 15px;
+
+  /* Margin Variables */
+  --margin-sm: 5px;
+  --margin-md: 10px;
+  --margin-lg: 15px;
+  --margin-xl: 20px;
+  --margin-xxl: 30px;
+
+  /* Margin X (Horizontal) and Y (Vertical) */
+  --margin-x-sm: 5px;
+  --margin-x-md: 10px;
+  --margin-x-lg: 15px;
+  --margin-y-sm: 5px;
+  --margin-y-md: 10px;
+  --margin-y-lg: 15px;
+
+  /* Additional Spacing for Width & Height */
+  --width-sm: 100px;
+  --width-md: 200px;
+  --width-lg: 300px;
+
+  --height-sm: 50px;
+  --height-md: 100px;
+  --height-lg: 150px;
+
+  /* Other Spacing-related Variables */
+  --container-max-width: 1200px;
+  --container-padding: 20px;
+}

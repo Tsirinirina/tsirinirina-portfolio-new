@@ -1,0 +1,55 @@
+:root {
+  /* Flexbox Display */
+  --fd: flex;
+  /* Flexbox Direction */
+  --f-direction-row: row;
+  --f-direction-column: column;
+  --f-direction-row-reverse: row-reverse;
+  --f-direction-column-reverse: column-reverse;
+
+  /* Flexbox Justify Content */
+  --f-justify-start: flex-start;
+  --f-justify-end: flex-end;
+  --f-justify-center: center;
+  --f-justify-between: space-between;
+  --f-justify-around: space-around;
+  --f-justify-evenly: space-evenly;
+
+  /* Flexbox Align Items */
+  --f-align-start: flex-start;
+  --f-align-end: flex-end;
+  --f-align-center: center;
+  --f-align-baseline: baseline;
+  --f-align-stretch: stretch;
+
+  /* Flexbox Align Content (for multi-line f containers) */
+  --f-align-content-start: flex-start;
+  --f-align-content-end: flex-end;
+  --f-align-content-center: center;
+  --f-align-content-between: space-between;
+  --f-align-content-around: space-around;
+  --f-align-content-stretch: stretch;
+
+  /* Flexbox Wrap */
+  --f-wrap: wrap;
+  --f-nowrap: nowrap;
+  --f-wrap-reverse: wrap-reverse;
+
+  /* Flexbox Gap */
+  --f-gap-sm: 5px;
+  --f-gap-md: 10px;
+  --f-gap-lg: 15px;
+  --f-gap-xl: 20px;
+
+  /* Flexbox Grow and Shrink */
+  --f-grow: 1;
+  --f-shrink: 1;
+  --f-grow-none: 0;
+  --f-shrink-none: 0;
+
+  /* f Basis */
+  --f-basis-auto: auto;
+  --f-basis-full: 100%;
+  --f-basis-half: 50%;
+  --f-basis-quarter: 25%;
+}
