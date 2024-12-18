@@ -41,7 +41,7 @@ export default function Portfolio() {
             <Menu className="w-6 h-6" />
           </button>
         </nav>
-        <h1 className={styles.headerTitle}>Welcome to My Universe</h1>
+        <h1 className={styles.headerTitle}>Bienvenue dans mon univers</h1>
       </header>
 
       {/* Main Content */}
