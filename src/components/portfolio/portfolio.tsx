@@ -12,42 +12,85 @@ import {
   Building,
 } from "lucide-react";
 import styles from "./portfolio.module.css";
+import NavbarUi from "../ui/navbar/navbar.ui";
+import NameUi from "../ui/name/name.ui";
+import { Text } from "../text/text";
+import CodeblockText from "../code-block-text/code-block-text";
+import data from "./personal-info.json";
+import Typewriter from "../typewriter/typewriter";
+import TypewriterCode from "../typewriter/typewriter-code";
 
 export default function Portfolio() {
+  const codeString = `
+  import SyntaxHighlighter from 'react-syntax-highlighter';
+  import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+  const Component = () => {
+    const codeString = '(num) => num + 1';
+    return (
+      <SyntaxHighlighter language="javascript" style={docco}>
+        {codeString}
+      </SyntaxHighlighter>
+    );
+};
+  `;
+
+  const da = data.description.toString();
+
   return (
     <div className={styles.container}>
       {/* Header */}
-      <header className={styles.header}>
-        <Image
+      {/* <header className={styles.header}> */}
+      {/* <Image
           src="https://tsirinirina-patrick.netlify.app/public/images/bg.png"
           alt="Space background"
           layout="fill"
           objectFit="cover"
           className="absolute z-0"
-        />
-        <nav className={styles.nav}>
-          <Link href="/" className={styles.logo}>
-            Tsirinirina Patrick
-          </Link>
-          <div className={styles.navLinks}>
-            <Link href="#about" className={styles.navLink}>
-              About
-            </Link>
-            <Link href="#contact" className={styles.navLink}>
-              Contact
-            </Link>
-          </div>
-          <button className={styles.menuButton}>
-            <Menu className="w-6 h-6" />
-          </button>
-        </nav>
-        <h1 className={styles.headerTitle}>Bienvenue dans mon univers</h1>
-      </header>
+        /> */}
+      {/* <NavbarUi /> */}
+      {/* <h1 className={styles.headerTitle}>Bienvenue dans mon univers</h1> */}
+      {/* </header> */}
+
+      <div>
+        <Text.Title tag="h1">Titre h1</Text.Title>
+        <Text.Title tag="h2">Titre h2</Text.Title>
+        <Text.Title tag="h3">Titre h3</Text.Title>
+        <Text.Subtitle>Sous-titre</Text.Subtitle>
+        <Text.Description>
+          Description, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Impedit aut et, nesciunt dignissimos quaerat iste tempore dolorem
+          repellendus laudantium corporis.
+        </Text.Description>
+        <Text.Description fontStyle="italic">
+          Description, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Impedit aut et, nesciunt dignissimos quaerat iste tempore dolorem
+          repellendus laudantium corporis.
+        </Text.Description>
+        <Text.Text>
+          Text Simple, Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Sequi, placeat.
+        </Text.Text>
+        <Text.Title tag="h1" fontWeight="bold" fontFamily={""}>
+          <Typewriter typingSpeed={80}>
+            {`${data.lastname} ${data.firstname}`}
+          </Typewriter>
+        </Text.Title>
+
+        <CodeblockText language="html">{`<h1 class>${data.firstname}</h1>`}</CodeblockText>
+        <Typewriter typingSpeed={80} cursor>
+          Bonjour, ceci est une animation de type "machine à écrire" en React.
+        </Typewriter>
+        <div></div>
+        <TypewriterCode typingSpeed={40} cursor={true}>
+          {`${da}`}
+        </TypewriterCode>
+      </div>
 
       {/* Main Content */}
       <main className={styles.main}>
         {/* About Me */}
-        <section id="about" className={styles.section}>
+        {/* <section id="about" className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <User className={styles.sectionIcon} />
             <span>About Me</span>
@@ -58,10 +101,10 @@ export default function Portfolio() {
             various galaxies of programming, always seeking new challenges and
             opportunities to grow.
           </p>
-        </section>
+        </section> */}
 
         {/* Academic Background */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <GraduationCap className={styles.sectionIcon} />
             <span>Academic Background</span>
@@ -70,10 +113,10 @@ export default function Portfolio() {
             <li>B.Sc. in Computer Science, Tech University (2018-2022)</li>
             <li>M.Sc. in Artificial Intelligence, AI Institute (2022-2024)</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Skills in Development */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <Code className={styles.sectionIcon} />
             <span>Skills in Development</span>
@@ -86,10 +129,10 @@ export default function Portfolio() {
             <li className={styles.skillItem}>Docker</li>
             <li className={styles.skillItem}>AWS</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Completed Projects */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <Briefcase className={styles.sectionIcon} />
             <span>Completed Projects</span>
@@ -128,10 +171,10 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Training */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <Award className={styles.sectionIcon} />
             <span>Training</span>
@@ -141,10 +184,10 @@ export default function Portfolio() {
             <li>Machine Learning Bootcamp (2022)</li>
             <li>AWS Certified Solutions Architect (2021)</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Professional Background */}
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>
             <Building className={styles.sectionIcon} />
             <span>Professional Background</span>
@@ -167,10 +210,10 @@ export default function Portfolio() {
               </p>
             </li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Contact */}
-        <section id="contact" className={styles.section}>
+        {/* <section id="contact" className={styles.section}>
           <h2 className={styles.sectionTitle}>Contact</h2>
           <p>
             Feel free to reach out to me at:{" "}
@@ -181,16 +224,16 @@ export default function Portfolio() {
               parajaonarison@gmail.com
             </a>
           </p>
-        </section>
+        </section> */}
       </main>
 
       {/* Footer */}
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <p>
           &copy; {new Date().getFullYear()} Tsirinirina RAJAONARISON. All rights
           reserved.
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

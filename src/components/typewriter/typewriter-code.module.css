@@ -1,0 +1,19 @@
+.typewriterContainer {
+  display: inline-block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.typewriterCursor {
+  display: inline; /* Ensures cursor stays on the same line */
+  background-color: transparent;
+  animation: blink 0.8s steps(2, start) infinite;
+  margin-left: 2px; /* Optional: Add spacing between the text and cursor */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
