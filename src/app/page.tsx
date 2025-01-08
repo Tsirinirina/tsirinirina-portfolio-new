@@ -1,5 +1,6 @@
 import Portfolio from "@/components/portfolio/portfolio";
 import styles from "./page.module.css";
+import NavbarUi from "@/components/ui/navbar/navbar.ui";
 
 export default function Home() {
   return (

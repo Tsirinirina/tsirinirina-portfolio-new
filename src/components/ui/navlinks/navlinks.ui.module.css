@@ -5,22 +5,28 @@
   align-items: center;
   width: fit-content;
   gap: 20px;
-  background: var(--light);
-  padding: 20px 15px;
+  background: #111827d6;
+  padding: 10px 15px;
   min-width: 300px;
-  border-radius: 30px;
+  border-radius: 10px;
   transition: trasform 2s ease-in-out;
 }
 
-.container:hover {
-  transform: scale(1.02);
-}
-
 .navLink {
-  color: var(--blue-dark);
+  color: var(--light); /* Couleur par défaut pour tous les liens */
   text-align: center;
+  transition: color 0.3s ease; /* Animation fluide */
 }
 
 .navLink:hover {
-  color: var(--primary-hover-bg);
+  color: var(--light); /* Couleur du texte */
+  text-shadow: 0 0 5px var(--light), /* Petit halo */ 0 0 10px var(--light),
+    /* Halo intermédiaire */ 0 0 20px var(--light-hover),
+    /* Halo externe */ 0 0 40px var(--light-hover); /* Grosse lueur néon */
+  transition: text-shadow 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+
+/* Cibler tous les autres liens lorsqu'un lien est survolé */
+.container:hover .navLink:not(:hover) {
+  color: var(--light-hover); /* Couleur pour tous les liens non survolés */
 }

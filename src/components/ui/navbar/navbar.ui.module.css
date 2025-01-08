@@ -1,5 +1,5 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -10,7 +10,7 @@
   flex-direction: column;
   padding: 1.5rem;
   width: 100%;
-  gap: 30px;
+  gap: 20px;
 }
 
 .logo {

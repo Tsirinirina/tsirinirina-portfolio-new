@@ -2,12 +2,18 @@ import Link from "next/link";
 import styles from "./navlinks.ui.module.css";
 const Navlinks = () => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}  neonBlock`}>
       <Link href="#about" className={styles.navLink}>
-        About
+        / about
       </Link>
       <Link href="#contact" className={styles.navLink}>
-        Contact
+        / contact
+      </Link>
+      <Link href="#contact" className={styles.navLink}>
+        / lien 2
+      </Link>
+      <Link href="#contact" className={styles.navLink}>
+        / lien 3
       </Link>
     </div>
   );
