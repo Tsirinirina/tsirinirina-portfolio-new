@@ -13,13 +13,78 @@ export default function Portfolio() {
       <NavbarUi />
       {/* Main Content */}
       <main className={styles.main}>
-        <section className={styles.banner}>
+        <section className={styles.banner} id="banner">
           <BannerName />
           <JobTitle />
           <div className={styles.scrollDownContainer}>
             <ScrollDown />
           </div>
-          <CodeTest />
+        </section>
+        <section
+          id="myskills"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          SKILLS
+        </section>
+        <section
+          id="mywork"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          PROJECTS RÉALISÉ
+        </section>
+        <section
+          id="professional-expertise"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          PROFESSIONAL EXPERTISE
+        </section>
+        <section
+          id="formation"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          FORMATION
+        </section>
+        <section
+          id="contact-form"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          FORMULAIRE DE CONTACT
+        </section>
+        <section
+          id="about"
+          style={{
+            height: "300px",
+            width: "100%",
+            margin: "30px 20px",
+            background: "#37334957",
+          }}
+        >
+          À Propos de Moi
         </section>
       </main>
     </div>

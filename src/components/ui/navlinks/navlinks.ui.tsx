@@ -1,8 +1,11 @@
 import Link from "next/link";
 import styles from "./navlinks.ui.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import UseWindowSize from "@/hooks/window.size";
 
 const Navlinks = () => {
+  const windowsWidthSize = UseWindowSize().width;
+
   return (
     <AnimatePresence>
       <motion.div
@@ -18,17 +21,33 @@ const Navlinks = () => {
         }}
         className={`${styles.container}  neonBlue`}
       >
-        <Link href="#about" className={styles.navLink}>
-          / about
+        <Link
+          href="#"
+          onClick={() => handleScroll("myskills")}
+          className={styles.navLink}
+        >
+          /Compétences
         </Link>
-        <Link href="#contact" className={styles.navLink}>
-          / contact
+        <Link
+          href="#"
+          onClick={() => handleScroll("mywork")}
+          className={styles.navLink}
+        >
+          /Projets
         </Link>
-        <Link href="#contact" className={styles.navLink}>
-          / lien 2
+        <Link
+          href="#"
+          onClick={() => handleScroll("professional-expertise")}
+          className={styles.navLink}
+        >
+          /Expérience
         </Link>
-        <Link href="#contact" className={styles.navLink}>
-          / lien 3
+        <Link
+          href="#"
+          onClick={() => handleScroll("about")}
+          className={styles.navLink}
+        >
+          {windowsWidthSize > 736 ? "/Qui Suis-Je ?" : "/?"}
         </Link>
       </motion.div>
     </AnimatePresence>
@@ -36,3 +55,13 @@ const Navlinks = () => {
 };
 
 export default Navlinks;
+
+const handleScroll = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "center", // Place l'élément au centre de l'écran
+    });
+  }
+};

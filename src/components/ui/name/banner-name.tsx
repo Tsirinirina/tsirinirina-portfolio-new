@@ -4,8 +4,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./banner-name.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import data from "./personal-info.json";
+import UseWindowSize from "@/hooks/window.size";
 
 const BannerName = () => {
+  const windowsWidthSize = UseWindowSize().width;
   return (
     <AnimatePresence>
       <motion.div
@@ -26,7 +28,13 @@ const BannerName = () => {
           tag="h1"
           fontWeight="bold"
           fontFamily=""
-          fontSize="92px"
+          fontSize={
+            windowsWidthSize > 736
+              ? "92px"
+              : windowsWidthSize > 425
+              ? "48px"
+              : "28px"
+          }
           className={`${gabarito.className} ${styles.name}`}
         >
           {data.firstname.toUpperCase()}.
