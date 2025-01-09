@@ -16,7 +16,7 @@ const Navlinks = () => {
           damping: 10,
           duration: 0.8,
         }}
-        className={`${styles.container}  neonBlock`}
+        className={`${styles.container}  neonBlue`}
       >
         <Link href="#about" className={styles.navLink}>
           / about

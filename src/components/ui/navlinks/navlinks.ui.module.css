@@ -13,20 +13,18 @@
 }
 
 .navLink {
-  color: var(--light); /* Couleur par défaut pour tous les liens */
+  color: var(--light);
   text-align: center;
-  transition: color 0.3s ease; /* Animation fluide */
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
-  color: var(--light); /* Couleur du texte */
-  text-shadow: 0 0 5px var(--light), /* Petit halo */ 0 0 10px var(--light),
-    /* Halo intermédiaire */ 0 0 20px var(--light-hover),
-    /* Halo externe */ 0 0 40px var(--light-hover); /* Grosse lueur néon */
-  transition: text-shadow 0.3s ease, color 0.3s ease; /* Animation fluide */
+  color: var(--light);
+  text-shadow: 0 0 5px var(--light), 0 0 10px var(--light),
+    0 0 20px var(--light-hover), 0 0 40px var(--light-hover);
+  transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Cibler tous les autres liens lorsqu'un lien est survolé */
 .container:hover .navLink:not(:hover) {
-  color: var(--light-hover); /* Couleur pour tous les liens non survolés */
+  color: var(--light-hover);
 }

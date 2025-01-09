@@ -40,9 +40,12 @@
 
   --background: var(--light);
   --foreground: var(--dark);
+
+  --neon-blue-bg: #697fff;
+  --neon-blue-hiver: #9eacfd;
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --white: #fff;
   --black: #000;
   --light: #e0e0e0;
@@ -83,4 +86,4 @@
 
   --background: var(--dark);
   --foreground: var(--light);
-}
+} */
