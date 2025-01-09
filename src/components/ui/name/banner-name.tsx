@@ -11,15 +11,15 @@ const BannerName = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: -50 }}
+        initial={{ opacity: 0, scale: 1.3, y: -50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: -50 }}
+        exit={{ opacity: 0, scale: 1.3, y: -50 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{
           type: "spring",
           stiffness: 400,
-          damping: 10,
+          damping: 5,
           duration: 0.8,
         }}
         className={styles.nameContainer}

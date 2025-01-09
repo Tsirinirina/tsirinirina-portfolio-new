@@ -29,7 +29,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 .banner {
@@ -37,7 +37,8 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 80px;
+  height: 100vh;
 }
 
 .scrollDownContainer {

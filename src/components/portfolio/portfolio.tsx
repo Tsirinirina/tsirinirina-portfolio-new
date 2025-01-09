@@ -7,6 +7,8 @@ import JobTitle from "../ui/jobtitle/jobtitle";
 import ScrollDown from "../scroll-down/scroll-down";
 import CodeTest from "./code.test";
 import SectionContainer from "../ui/section-container/section-container";
+import SkillsContainer from "../ui/skills-container/skills-container";
+import ScrollDown2 from "../scroll-down-2/scroll-down-2";
 
 export default function Portfolio() {
   return (
@@ -15,17 +17,17 @@ export default function Portfolio() {
       {/* Main Content */}
       <main className={styles.main}>
         <section className={styles.banner} id="banner">
-          <BannerName />
           <JobTitle />
+          <BannerName />
           <div className={styles.scrollDownContainer}>
             <ScrollDown />
           </div>
         </section>
-        <SectionContainer id="myskills" title="Compétences">
+        {/* <SectionContainer id="myskills" title="Compétences">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
           totam?
-        </SectionContainer>
-
+        </SectionContainer> */}
+        <SkillsContainer id="myskills" />
         <section
           id="mywork"
           style={{

@@ -20,11 +20,11 @@ export const geistMono = localFont({
   weight: "100 900",
 });
 
-export const inconsolate = localFont({
-  src: "./../fonts/Inconsolata-VariableFont_wdth,wght.ttf",
-  variable: "--font-inconsolate",
-  weight: "200 300 400 700",
-});
+// export const inconsolate = localFont({
+//   src: "./../fonts/Inconsolata-Regular.ttf",
+//   variable: "--font-inconsolate",
+//   weight: "200 300 400 700",
+// });
 
 export const space_mono = localFont({
   src: "./../fonts/SpaceMono-Regular.ttf",
@@ -32,12 +32,12 @@ export const space_mono = localFont({
   weight: "400 700",
 });
 
-// export const inconsolate = Inconsolata({
-//   subsets: ["latin"],
-//   weight: ["200", "300", "400", "700"],
-//   display: "swap",
-//   variable: "--font-inconsolate",
-// });
+export const inconsolate = Inconsolata({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "700"],
+  display: "swap",
+  variable: "--font-inconsolate",
+});
 
 // export const roboto = Roboto({
 //   subsets: ["latin"],

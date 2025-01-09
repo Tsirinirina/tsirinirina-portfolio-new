@@ -11,11 +11,11 @@ const JobTitle = () => {
       fontWeight="bold"
       fontFamily={""}
       fontSize="26px"
-      className={`${geistSans.className} `}
+      className={`${inconsolate.className} `}
     >
       <Typewriter
         typingSpeed={80}
-        className={`${geistSans.className}  ${styles.jobtitle}`}
+        className={`${inconsolate.className}  ${styles.jobtitle}`}
       >
         {data.jobTitle}
       </Typewriter>
