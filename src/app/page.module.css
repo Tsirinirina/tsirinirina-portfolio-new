@@ -1,3 +1,6 @@
+.page {
+}
+
 .errorContainer {
   display: flex;
   justify-content: center;
@@ -20,4 +23,8 @@
   line-height: 20px;
   word-spacing: 2px;
   font-family: "Roboto", sans-serif;
+}
+
+.main {
+  /* position: relative; */
 }

@@ -5,6 +5,7 @@ import NavbarUi from "../ui/navbar/navbar.ui";
 import BannerName from "../ui/name/banner-name";
 import JobTitle from "../ui/jobtitle/jobtitle";
 import ScrollDown from "../scroll-down/scroll-down";
+import CodeTest from "./code.test";
 
 export default function Portfolio() {
   return (
@@ -18,6 +19,7 @@ export default function Portfolio() {
           <div className={styles.scrollDownContainer}>
             <ScrollDown />
           </div>
+          <CodeTest />
         </section>
       </main>
     </div>

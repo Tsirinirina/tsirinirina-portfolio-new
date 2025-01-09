@@ -1,9 +1,11 @@
 .container {
   min-height: 100vh;
-  background-color: var(--blue-dark);
+  /* background-color: var(--blue-dark); */
   color: #f3f4f6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+  width: 100%;
+  position: absolute;
 }
 
 .header {

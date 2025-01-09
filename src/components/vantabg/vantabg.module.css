@@ -1,0 +1,6 @@
+.vantaContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Assurez-vous que rien n'écrase le canvas */
+  position: relative;
+}
