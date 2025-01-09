@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  /* background: #37334957; */
+  min-height: 100px;
+  padding: 20px 10px;
+}

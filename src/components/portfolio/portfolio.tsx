@@ -6,6 +6,7 @@ import BannerName from "../ui/name/banner-name";
 import JobTitle from "../ui/jobtitle/jobtitle";
 import ScrollDown from "../scroll-down/scroll-down";
 import CodeTest from "./code.test";
+import SectionContainer from "../ui/section-container/section-container";
 
 export default function Portfolio() {
   return (
@@ -20,23 +21,17 @@ export default function Portfolio() {
             <ScrollDown />
           </div>
         </section>
-        <section
-          id="myskills"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 20px",
-            background: "#37334957",
-          }}
-        >
-          SKILLS
-        </section>
+        <SectionContainer id="myskills" title="Compétences">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+          totam?
+        </SectionContainer>
+
         <section
           id="mywork"
           style={{
             height: "300px",
             width: "100%",
-            margin: "30px 20px",
+            margin: "30px 0",
             background: "#37334957",
           }}
         >
@@ -47,7 +42,7 @@ export default function Portfolio() {
           style={{
             height: "300px",
             width: "100%",
-            margin: "30px 20px",
+            margin: "30px 0",
             background: "#37334957",
           }}
         >
@@ -58,7 +53,7 @@ export default function Portfolio() {
           style={{
             height: "300px",
             width: "100%",
-            margin: "30px 20px",
+            margin: "30px 0",
             background: "#37334957",
           }}
         >
@@ -69,7 +64,7 @@ export default function Portfolio() {
           style={{
             height: "300px",
             width: "100%",
-            margin: "30px 20px",
+            margin: "30px 0",
             background: "#37334957",
           }}
         >
@@ -80,7 +75,7 @@ export default function Portfolio() {
           style={{
             height: "300px",
             width: "100%",
-            margin: "30px 20px",
+            margin: "30px 0",
             background: "#37334957",
           }}
         >
