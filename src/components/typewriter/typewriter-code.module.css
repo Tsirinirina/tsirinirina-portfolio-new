@@ -1,6 +1,6 @@
 .typewriterContainer {
   display: inline-block;
-  font-family: monospace;
+  font-family: var(--font-inconsolate);
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }

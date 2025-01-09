@@ -8,17 +8,7 @@ import "../styles/spacing.css";
 import "../styles/flexbox.css";
 import "../styles/shadow.css";
 import { ThemeProvider } from "next-themes";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { geistMono, geistSans } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Tsirinirina Patrick RAJAONARISON| Porfolio",

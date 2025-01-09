@@ -1,0 +1,35 @@
+{
+  "firstname": "Tsirinirina Patrick",
+  "lastname": "RAJAONARISON",
+  "emails": "parajaonarison@gmail.com",
+  "gender": "Male",
+  "phones": ["0329228172", "0383724020"],
+  "birthDate": "1997-12-17",
+  "birthPlace": "Antsirabe I",
+  "address": "152HJ Ilanivato Ampasika",
+  "city": "Antananrivo",
+  "contry": "Madagascar",
+  "jobTitle": "Développeur Full Stack Javascript & App développeur.",
+  "description": "\n<h2 class='title'>Un Développeur Web & Mobile</h2>\n\t<p class='description'>Passionné par la programmation. Amoureux des nouveaux technologies.</p>\n\t<p>J'aime les défis. Motivé et disponible./>\n\t<p>Je suis un développeur Web et Mobile Junior.</p>\n\t<p>Étudiant diplômé d'une licence professionnelle en Génie logiciel à l'<b>Institut d'Enseignement Supérieur d'Antsirabe Vakinankaratra</b>.</p>",
+  "slogan": "‘’ Ma passion m'a conduit vers le métier de développeur, où je transforme des idées en solutions créatives et modernes. ‘’",
+  "socials": [
+    {
+      "siteName": "Linkedin",
+      "siteIcon": "",
+      "url": "",
+      "username": "Patrick Rajaonarison"
+    },
+    {
+      "siteName": "Facebook",
+      "siteIcon": "",
+      "url": "",
+      "username": "Tsiry Rajaonarison"
+    },
+    {
+      "siteName": "Portfolio 1",
+      "siteIcon": "",
+      "url": "https://tsirinirina-patrick.netlify.app",
+      "username": ""
+    }
+  ]
+}

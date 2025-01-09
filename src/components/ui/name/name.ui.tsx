@@ -1,12 +1,7 @@
 import useScrollPosition from "@/hooks/scroll-position";
 import styles from "./name.ui.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  inconsolate,
-  lexend_deca,
-  source_code,
-  space_mono,
-} from "@/utils/fonts";
+import { space_mono } from "@/utils/fonts";
 import { Text } from "@/components/text/text";
 import Typewriter from "@/components/typewriter/typewriter";
 

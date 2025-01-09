@@ -38,6 +38,11 @@
   gap: 30px;
 }
 
-.jobtitle {
-  font-weight: 400;
+.scrollDownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 20vh;
 }
