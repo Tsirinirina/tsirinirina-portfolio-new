@@ -43,6 +43,10 @@
 
   --neon-blue-bg: #697fff;
   --neon-blue-hiver: #9eacfd;
+
+  --container-bg-dark: #191931eb;
+  --container-border: #3f485ce3;
+  --container-title-bg: #25263c;
 }
 
 /* [data-theme="dark"] {

@@ -1,9 +1,9 @@
 .container {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
   margin: 40px 0;
 }
 
@@ -14,8 +14,76 @@
 .content {
   width: 100%;
   height: auto;
-  /* background: #37334957; */
+  background: var(--container-bg-dark);
   min-height: 100px;
-  padding: 20px 10px;
+  padding: 50px 25px;
   text-align: justify;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bordered {
+  /* border: 1px solid var(--light); */
+  border-radius: 6px;
+}
+
+.skillsBlock {
+  flex: 1;
+  padding: 30px;
+}
+
+.skillsBlock:not(:last-child) {
+  border-right: 2px solid var(--container-border);
+}
+
+.skillsTitle {
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  background: var(--container-title-bg);
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 85px 1fr;
+}
+
+.body p {
+  line-height: 24px;
+}
+
+.leftDeco {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  background: var(--container-border);
+  width: 5px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

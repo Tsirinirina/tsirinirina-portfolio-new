@@ -27,7 +27,7 @@ export default function Portfolio() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
           totam?
         </SectionContainer> */}
-        <SkillsContainer id="myskills" />
+        <SkillsContainer />
         <section
           id="mywork"
           style={{
