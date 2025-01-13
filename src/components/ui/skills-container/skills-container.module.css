@@ -23,7 +23,7 @@
 }
 
 .bordered {
-  /* border: 1px solid var(--light); */
+  /* border: 1px solid var(--container-border); */
   border-radius: 6px;
 }
 
@@ -80,10 +80,24 @@
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .content {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .skillsBlock {
+    padding: 20px 0px;
+  }
+
+  .skillsBlock:not(:last-child) {
+    border-right: none;
+    border-bottom: 2px solid var(--container-border);
   }
 }
