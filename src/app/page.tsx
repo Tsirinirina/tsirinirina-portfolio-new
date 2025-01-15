@@ -8,7 +8,7 @@ import Particule from "@/components/particules/particules";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} lato`}>
       <main
         className={styles.main}
         style={{

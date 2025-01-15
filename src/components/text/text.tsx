@@ -1,3 +1,4 @@
+"use client";
 export namespace Text {
   type BaseProps = {
     children: React.ReactNode;
@@ -6,9 +7,9 @@ export namespace Text {
     fontStyle?: "normal" | "italic" | "revert";
     textDecoration?: string;
     color?: string;
-    className?: string;
+    className?: any;
     customStyles?: React.CSSProperties;
-    fontFamily?: String;
+    fontFamily?: any;
   };
 
   type TitleProps = {
@@ -45,14 +46,14 @@ export namespace Text {
       fontStyle,
       textDecoration,
       color,
-      fontFamily,
+      // fontFamily,
       ...customStyles,
     };
 
     const Tag = tag as keyof JSX.IntrinsicElements;
 
     return (
-      <Tag className={`text-title ${className}`} style={style as any}>
+      <Tag className={`text-title ${className || ""}`} style={style as any}>
         {children}
       </Tag>
     );
@@ -71,7 +72,7 @@ export namespace Text {
   }) => {
     return (
       <h2
-        className={`text-subtitle ${className}`}
+        className={`text-subtitle ${className || ""}`}
         style={{
           fontSize,
           fontWeight,
@@ -99,7 +100,7 @@ export namespace Text {
   }) => {
     return (
       <p
-        className={`text-description ${className}`}
+        className={`text-description ${className || ""}`}
         style={{
           fontSize,
           fontWeight,
@@ -127,7 +128,7 @@ export namespace Text {
   }) => {
     return (
       <span
-        className={`text-generic ${className}`}
+        className={`text-generic ${className || ""}`}
         style={{
           fontSize,
           fontWeight,

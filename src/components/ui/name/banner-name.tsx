@@ -1,5 +1,4 @@
 import { Text } from "@/components/text/text";
-import { gabarito } from "@/utils/fonts";
 import React, { useState, useEffect } from "react";
 import styles from "./banner-name.module.css";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,7 +34,7 @@ const BannerName = () => {
               ? "48px"
               : "28px"
           }
-          className={`${gabarito.className} ${styles.name}`}
+          className={`gabarito ${styles.name}`}
         >
           {data.firstname.toUpperCase()}.
         </Text.Title>

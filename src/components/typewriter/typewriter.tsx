@@ -1,18 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./typewriter.module.css";
+import clsx from "clsx";
 
 type TypewriterProps = {
   children: string;
   typingSpeed?: number;
-  className?: string;
+  className?: any;
   cursor?: boolean;
+  fontSize?: string;
+  fontWeight?: string;
+  fontFamily: "inconsolate" | "source-code" | "lato";
 };
 
 export const Typewriter: React.FC<TypewriterProps> = ({
   children,
   typingSpeed = 100,
-  className = "",
+  className,
   cursor = true,
+  fontSize = "12px",
+  fontWeight = "200",
+  fontFamily = "inconsolate",
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,10 +60,13 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`${style.typewriterContainer} ${className}`}
+      className={`${style.typewriterContainer} ${fontFamily}`}
+      style={{ fontSize, fontWeight }}
     >
       <span>{displayedText}</span>
-      {cursor && <span className={style.typewriterCursor}>|</span>}
+      {cursor && (
+        <span className={clsx(style.typewriterCursor, fontFamily)}>|</span>
+      )}
     </div>
   );
 };

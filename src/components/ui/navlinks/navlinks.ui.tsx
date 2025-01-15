@@ -19,7 +19,7 @@ const Navlinks = () => {
           damping: 10,
           duration: 0.8,
         }}
-        className={`${styles.container}  neonBlue`}
+        className={`${styles.container}  neonBlue lato`}
       >
         <Link
           href="#"
@@ -61,7 +61,7 @@ const handleScroll = (id: string) => {
   if (element) {
     element.scrollIntoView({
       behavior: "smooth",
-      block: "center", // Place l'élément au centre de l'écran
+      block: "center",
     });
   }
 };

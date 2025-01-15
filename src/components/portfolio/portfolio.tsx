@@ -9,6 +9,7 @@ import CodeTest from "./code.test";
 import SectionContainer from "../ui/section-container/section-container";
 import SkillsContainer from "../ui/skills-container/skills-container";
 import ScrollDown2 from "../scroll-down-2/scroll-down-2";
+import { LastWork } from "../last-work/last-work";
 
 export default function Portfolio() {
   return (
@@ -23,11 +24,9 @@ export default function Portfolio() {
             <ScrollDown />
           </div>
         </section>
-        {/* <SectionContainer id="myskills" title="Compétences">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
-          totam?
-        </SectionContainer> */}
+
         <SkillsContainer />
+        <LastWork />
         <section
           id="mywork"
           style={{

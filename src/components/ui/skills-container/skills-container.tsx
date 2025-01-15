@@ -2,7 +2,6 @@
 
 import { Text } from "@/components/text/text";
 import styles from "./skills-container.module.css";
-import { geistSans, lato, lexend_deca, source_code } from "@/utils/fonts";
 import { IoLogoReact, IoLogoNodejs } from "react-icons/io5";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -31,7 +30,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         fontWeight="bold"
         fontFamily={""}
         fontSize="36px"
-        className={`${lato.className} ${styles.title}`}
+        className={`lato ${styles.title}`}
       >
         Mes Compétences
       </Text.Title>
@@ -43,12 +42,10 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
             <div className={styles.icon}>
               <IoLogoReact className={styles.sectionIcon} size={62} />
             </div>
-            <div className={`${styles.label} ${lexend_deca.className}`}>
-              Frontend Dev
-            </div>
+            <div className={`${styles.label} lexend-deca`}>Frontend Dev</div>
           </div>
           <motion.div
-            className={`${styles.body} ${source_code.className}`}
+            className={`${styles.body} source-code`}
             initial={{ opacity: 0, y: -50 }}
             animate={
               isBackendInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
@@ -75,12 +72,10 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         <div className={styles.skillsBlock} ref={backendRef}>
           <div className={styles.skillsTitle}>
             <IoLogoNodejs className={styles.sectionIcon} size={62} />
-            <div className={`${styles.label} ${lexend_deca.className}`}>
-              Backend Dev
-            </div>
+            <div className={`${styles.label} lexend-deca `}>Backend Dev</div>
           </div>
           <motion.div
-            className={`${styles.body} ${source_code.className}`}
+            className={`${styles.body} source-code`}
             initial={{ opacity: 0, y: -50 }}
             animate={
               isBackendInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
