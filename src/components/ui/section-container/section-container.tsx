@@ -1,6 +1,5 @@
 import { Text } from "@/components/text/text";
 import styles from "./section-container.module.css";
-import { geistSans } from "@/utils/fonts";
 
 interface SectionContainerProps {
   children: any;
@@ -20,7 +19,7 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
         fontWeight="bold"
         fontFamily={""}
         fontSize="36px"
-        className={`${geistSans.className} ${styles.title}`}
+        className={`gabarito ${styles.title}`}
       >
         {title}
       </Text.Title>
