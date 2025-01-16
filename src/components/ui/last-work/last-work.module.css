@@ -28,6 +28,25 @@
   gap: 20px;
 }
 
+.work {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info {
+  color: var(--gray-hover);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.techno {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;

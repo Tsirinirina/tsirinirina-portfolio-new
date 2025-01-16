@@ -56,6 +56,10 @@ export const LastWork: React.FC<LastWorkProps> = ({
           >
             {projectTitle}
           </Text.Subtitle>
+          <div className={styles.info}>
+            <div className={styles.clientInfo}>{clientInformation}</div>
+            <div className={styles.date}>{publishDate}</div>
+          </div>
         </div>
 
         <Text.Description

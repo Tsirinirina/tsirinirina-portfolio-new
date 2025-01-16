@@ -47,7 +47,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
             <div className={`${styles.label} lexend-deca`}>Frontend Dev</div>
           </div>
           <motion.div
-            className={`${styles.body} source-code`}
+            className={`${styles.body} lato`}
             initial={{ opacity: 0, y: -50 }}
             animate={
               isBackendInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
@@ -74,11 +74,10 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         <div className={styles.skillsBlock} ref={backendRef}>
           <div className={styles.skillsTitle}>
             <LogoTechno techno={TechnoList.NODEJS} size={62} />
-
             <div className={`${styles.label} lexend-deca `}>Backend Dev</div>
           </div>
           <motion.div
-            className={`${styles.body} source-code`}
+            className={`${styles.body} lato`}
             initial={{ opacity: 0, y: -50 }}
             animate={
               isBackendInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
