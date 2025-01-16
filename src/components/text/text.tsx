@@ -3,7 +3,7 @@ export namespace Text {
   type BaseProps = {
     children: React.ReactNode;
     fontSize?: string;
-    fontWeight?: string | number;
+    fontWeight?: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "bold";
     fontStyle?: "normal" | "italic" | "revert";
     textDecoration?: string;
     color?: string;
@@ -50,7 +50,7 @@ export namespace Text {
       ...customStyles,
     };
 
-    const Tag = tag as keyof JSX.IntrinsicElements;
+    const Tag = tag as keyof JSX.IntrinsicElements | any;
 
     return (
       <Tag className={`text-title ${className || ""}`} style={style as any}>
@@ -90,7 +90,7 @@ export namespace Text {
   export const Description: React.FC<BaseProps> = ({
     children,
     fontSize = "1rem",
-    fontWeight = "400",
+    fontWeight = "200",
     fontStyle = "normal",
     textDecoration,
     color = "inherit",

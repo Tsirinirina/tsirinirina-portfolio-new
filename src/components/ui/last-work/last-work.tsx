@@ -1,13 +1,31 @@
 import { Text } from "@/components/text/text";
 import styles from "./last-work.module.css";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { IoLogoReact, IoLogoWordpress } from "react-icons/io5";
+import { TechnoList } from "@/utils/techno.list";
+import LogoTechno from "@/components/logo-techno/logo-techno";
 
-interface LastWorkProps {}
+interface LastWorkProps {
+  projectTitle: string;
+  projetDescription: string;
+  clientInformation?: string;
+  technoList: string[];
+  startDate?: string;
+  publishDate?: string;
+}
 
-export const LastWork: React.FC<LastWorkProps> = () => {
+export const LastWork: React.FC<LastWorkProps> = ({
+  projectTitle,
+  projetDescription,
+  technoList,
+  clientInformation,
+  startDate,
+  publishDate,
+}) => {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true });
+  const [iconsList, setIconsList] = useState<TechnoList>();
 
   return (
     <div className={styles.container} id="lastWork">
@@ -18,21 +36,6 @@ export const LastWork: React.FC<LastWorkProps> = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
         ref={titleRef}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17.25 6.75L12 12m0 0l-5.25 5.25M12 12l5.25 5.25M12 12L6.75 6.75"
-          />
-        </svg>
-
         <Text.Title
           tag="h1"
           fontWeight="bold"
@@ -45,14 +48,34 @@ export const LastWork: React.FC<LastWorkProps> = () => {
       </motion.div>
 
       <div className={styles.content}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-        voluptatem sequi corrupti, dignissimos iure eum voluptates dolores
-        explicabo, sit eligendi numquam tempore reiciendis distinctio non odio,
-        pariatur at tempora earum ducimus? Dolorem dolore, ratione minima hic
-        libero voluptatem tempora numquam inventore blanditiis quos! Sint
-        placeat voluptate magni quisquam quis nobis asperiores sapiente, ipsam
-        nesciunt obcaecati pariatur minima id, fugit saepe, neque ad dolores
-        animi aut ratione illo ipsa libero incidunt.
+        <div className={styles.techno}>
+          {technoList.map((item, _i) => (
+            <LogoTechno
+              techno={item}
+              size={36}
+              colorized={true}
+              key={`${_i}_icons`}
+            />
+          ))}
+        </div>
+        <div className={styles.work}>
+          <Text.Subtitle
+            fontWeight="bold"
+            fontFamily={""}
+            fontSize="28px"
+            className={`lexend-deca ${styles.subtitle}`}
+          >
+            {projectTitle}
+          </Text.Subtitle>
+        </div>
+        <Text.Description
+          fontWeight="400"
+          fontFamily={""}
+          fontSize="16px"
+          className={`lato ${styles.description}`}
+        >
+          {projetDescription}
+        </Text.Description>
       </div>
     </div>
   );

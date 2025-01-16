@@ -10,6 +10,7 @@ import SectionContainer from "../ui/section-container/section-container";
 import SkillsContainer from "../ui/skills-container/skills-container";
 import ScrollDown2 from "../scroll-down-2/scroll-down-2";
 import { LastWork } from "../ui/last-work/last-work";
+import lastWork from "./last-work.json";
 
 export default function Portfolio() {
   return (
@@ -24,9 +25,15 @@ export default function Portfolio() {
             <ScrollDown />
           </div>
         </section>
-
         <SkillsContainer />
-        <LastWork />
+        <LastWork
+          projectTitle={lastWork.projectTitle}
+          projetDescription={lastWork.projectdescription}
+          technoList={lastWork.technoList}
+          clientInformation={lastWork.clientInformation}
+          publishDate={lastWork.publishDate}
+          startDate={lastWork.startDate}
+        />
         <section
           id="mywork"
           style={{

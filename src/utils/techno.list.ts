@@ -1,0 +1,113 @@
+export enum TechnoList {
+  // Langages de programmation
+  JAVASCRIPT = "JAVASCRIPT",
+  TYPESCRIPT = "TYPESCRIPT",
+  PYTHON = "PYTHON",
+  JAVA = "JAVA",
+  CSHARP = "CSHARP",
+  CPP = "CPP", // C++
+  C = "C",
+  RUBY = "RUBY",
+  PHP = "PHP",
+  SWIFT = "SWIFT",
+  KOTLIN = "KOTLIN",
+  GO = "GO",
+  RUST = "RUST",
+  DART = "DART",
+  SCALA = "SCALA",
+  PERL = "PERL",
+  LUA = "LUA",
+  HASKELL = "HASKELL",
+  SQL = "SQL",
+
+  // Frameworks front-end
+  REACTJS = "REACTJS",
+  ANGULAR = "ANGULAR",
+  VUEJS = "VUEJS",
+  SVELTE = "SVELTE",
+  NEXTJS = "NEXTJS",
+  NUXTJS = "NUXTJS",
+  TAILWINDCSS = "TAILWINDCSS",
+  BOOTSTRAP = "BOOTSTRAP",
+
+  // Frameworks back-end
+  NODEJS = "NODEJS",
+  EXPRESSJS = "EXPRESSJS",
+  NESTJS = "NESTJS",
+  LARAVEL = "LARAVEL",
+  DJANGO = "DJANGO",
+  FLASK = "FLASK",
+  SPRING = "SPRING",
+  ASPNET = "ASPNET",
+  FASTAPI = "FASTAPI",
+
+  // Bases de données
+  MYSQL = "MYSQL",
+  POSTGRESQL = "POSTGRESQL",
+  MONGODB = "MONGODB",
+  REDIS = "REDIS",
+  SQLITE = "SQLITE",
+  ORACLE = "ORACLE",
+  MARIA_DB = "MARIA_DB",
+  COUCHDB = "COUCHDB",
+  DYNAMODB = "DYNAMODB",
+  NEO4J = "NEO4J",
+
+  // Outils de développement
+  DOCKER = "DOCKER",
+  KUBERNETES = "KUBERNETES",
+  JENKINS = "JENKINS",
+  GIT = "GIT",
+  GITHUB_ACTIONS = "GITHUB_ACTIONS",
+  TRAVIS_CI = "TRAVIS_CI",
+  VAGRANT = "VAGRANT",
+
+  // Technologies mobiles
+  REACT_NATIVE = "REACT_NATIVE",
+  FLUTTER = "FLUTTER",
+  IONIC = "IONIC",
+  XAMARIN = "XAMARIN",
+  SWIFTUI = "SWIFTUI",
+
+  // Outils DevOps et CI/CD
+  ANSIBLE = "ANSIBLE",
+  TERRAFORM = "TERRAFORM",
+  CHEF = "CHEF",
+  PUPPET = "PUPPET",
+  CIRCLECI = "CIRCLECI",
+
+  // Cloud Providers
+  AWS = "AWS",
+  GOOGLE_CLOUD = "GOOGLE_CLOUD",
+  AZURE = "AZURE",
+  HEROKU = "HEROKU",
+  NETLIFY = "NETLIFY",
+  VERCEL = "VERCEL",
+
+  // Libraries diverses
+  JQUERY = "JQUERY",
+  RXJS = "RXJS",
+  D3JS = "D3JS",
+  THREEJS = "THREEJS",
+  CHARTJS = "CHARTJS",
+
+  // Technologies spécifiques
+  GRAPHQL = "GRAPHQL",
+  REST_API = "REST_API",
+  APOLLO = "APOLLO",
+  SOCKET_IO = "SOCKET_IO",
+  WEBPACK = "WEBPACK",
+  BABEL = "BABEL",
+  TENSORFLOW = "TENSORFLOW",
+  PYTORCH = "PYTORCH",
+  OPENCV = "OPENCV",
+  UNITY = "UNITY",
+  UNREAL_ENGINE = "UNREAL_ENGINE",
+
+  // CMS
+  WORDPRESS = "WORDPRESS",
+  DRUPAL = "DRUPAL",
+  JOOMLA = "JOOMLA",
+  MAGENTO = "MAGENTO",
+  SHOPIFY = "SHOPIFY",
+}

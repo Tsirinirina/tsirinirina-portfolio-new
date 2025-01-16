@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn {
   width: 40px;
   height: 60px;
@@ -12,6 +18,7 @@
   position: relative;
 }
 
+/* Effet de scroll à l'intérieur du bouton */
 .scroll {
   width: 5px;
   height: 10px;
@@ -19,24 +26,59 @@
   background-color: var(--neon-blue-bg);
   box-shadow: 0px 0px 10px var(--neon-blue-bg);
   animation: scroll_4013 1s linear infinite;
-  transform: translateY(40%);
+  transform: translateY(10%);
 }
 
-.btn:after {
-  content: "";
-  position: absolute;
-  top: 140%;
-  color: whitesmoke;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+/* Conteneur des chevrons (en dehors du bouton) */
+.chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
 }
 
+/* Chevron individuel */
+.chevron {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border-right: 2px solid var(--neon-blue-bg);
+  border-bottom: 2px solid var(--neon-blue-bg);
+  transform: rotate(45deg);
+  animation: chevron_bounce 1.5s linear infinite;
+}
+
+/* Délai d'animation pour le second chevron */
+.chevron:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/* Animation de scroll */
 @keyframes scroll_4013 {
   0% {
-    transform: translateY(40%);
+    transform: translateY(20%);
   }
-
   50% {
-    transform: translateY(90%);
+    transform: translateY(95%);
+  }
+  100% {
+    transform: translateY(20%);
+  }
+}
+
+/* Animation des chevrons */
+@keyframes chevron_bounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
   }
 }

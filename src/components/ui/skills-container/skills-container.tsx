@@ -7,6 +7,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Typewriter from "@/components/typewriter/typewriter";
 import TypewriterCode from "@/components/typewriter/typewriter-code";
+import LogoTechno from "@/components/logo-techno/logo-techno";
+import { TechnoList } from "@/utils/techno.list";
 
 interface SkillsContainerProps {}
 
@@ -40,7 +42,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         <div className={styles.skillsBlock} ref={frontendRef}>
           <div className={styles.skillsTitle}>
             <div className={styles.icon}>
-              <IoLogoReact className={styles.sectionIcon} size={62} />
+              <LogoTechno techno={TechnoList.REACTJS} size={62} />
             </div>
             <div className={`${styles.label} lexend-deca`}>Frontend Dev</div>
           </div>
@@ -71,7 +73,8 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         {/* Backend Dev */}
         <div className={styles.skillsBlock} ref={backendRef}>
           <div className={styles.skillsTitle}>
-            <IoLogoNodejs className={styles.sectionIcon} size={62} />
+            <LogoTechno techno={TechnoList.NODEJS} size={62} />
+
             <div className={`${styles.label} lexend-deca `}>Backend Dev</div>
           </div>
           <motion.div
