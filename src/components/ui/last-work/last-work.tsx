@@ -1,4 +1,4 @@
-import { Text } from "../text/text";
+import { Text } from "@/components/text/text";
 import styles from "./last-work.module.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -12,12 +12,27 @@ export const LastWork: React.FC<LastWorkProps> = () => {
   return (
     <div className={styles.container} id="lastWork">
       <motion.div
-        className={``}
+        className={styles.containerTitle}
         initial={{ lineHeight: "0px" }}
         animate={isInView ? { lineHeight: "50px" } : {}}
         transition={{ duration: 1, ease: "easeInOut" }}
         ref={titleRef}
       >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.25 6.75L12 12m0 0l-5.25 5.25M12 12l5.25 5.25M12 12L6.75 6.75"
+          />
+        </svg>
+
         <Text.Title
           tag="h1"
           fontWeight="bold"

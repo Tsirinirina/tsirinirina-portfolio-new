@@ -9,7 +9,7 @@ import CodeTest from "./code.test";
 import SectionContainer from "../ui/section-container/section-container";
 import SkillsContainer from "../ui/skills-container/skills-container";
 import ScrollDown2 from "../scroll-down-2/scroll-down-2";
-import { LastWork } from "../last-work/last-work";
+import { LastWork } from "../ui/last-work/last-work";
 
 export default function Portfolio() {
   return (

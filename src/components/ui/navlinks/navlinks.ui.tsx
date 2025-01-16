@@ -19,7 +19,7 @@ const Navlinks = () => {
           damping: 10,
           duration: 0.8,
         }}
-        className={`${styles.container}  neonBlue lato`}
+        className={`${styles.container}  neonBlue source-code`}
       >
         <Link
           href="#"
