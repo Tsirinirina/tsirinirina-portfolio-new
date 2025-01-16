@@ -25,7 +25,6 @@ export const LastWork: React.FC<LastWorkProps> = ({
 }) => {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true });
-  const [iconsList, setIconsList] = useState<TechnoList>();
 
   return (
     <div className={styles.container} id="lastWork">
@@ -48,16 +47,6 @@ export const LastWork: React.FC<LastWorkProps> = ({
       </motion.div>
 
       <div className={styles.content}>
-        <div className={styles.techno}>
-          {technoList.map((item, _i) => (
-            <LogoTechno
-              techno={item}
-              size={36}
-              colorized={true}
-              key={`${_i}_icons`}
-            />
-          ))}
-        </div>
         <div className={styles.work}>
           <Text.Subtitle
             fontWeight="bold"
@@ -68,6 +57,7 @@ export const LastWork: React.FC<LastWorkProps> = ({
             {projectTitle}
           </Text.Subtitle>
         </div>
+
         <Text.Description
           fontWeight="400"
           fontFamily={""}
@@ -76,6 +66,16 @@ export const LastWork: React.FC<LastWorkProps> = ({
         >
           {projetDescription}
         </Text.Description>
+        <div className={styles.techno}>
+          {technoList.map((item, _i) => (
+            <LogoTechno
+              techno={item}
+              size={36}
+              colorized={true}
+              key={`${_i}_icons`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

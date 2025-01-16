@@ -23,6 +23,9 @@
   width: 100%;
   text-align: justify;
   line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media only screen and (max-width: 768px) {

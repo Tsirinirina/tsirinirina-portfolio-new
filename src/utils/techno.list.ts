@@ -103,6 +103,8 @@ export enum TechnoList {
   OPENCV = "OPENCV",
   UNITY = "UNITY",
   UNREAL_ENGINE = "UNREAL_ENGINE",
+  FIGMA = "FIGMA",
+  CANVA = "CANVA",
 
   // CMS
   WORDPRESS = "WORDPRESS",

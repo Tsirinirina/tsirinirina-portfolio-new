@@ -32,7 +32,10 @@ import {
   SiWebpack,
   SiGraphql,
   SiWordpress,
+  SiNestjs,
+  SiFigma,
 } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 
 interface LogoTechnoProps {
   techno: string;
@@ -58,11 +61,17 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
   const enumTechno = mapStringToEnum(techno) ?? TechnoList.ANGULAR;
 
   const getColor = (enumTechno: TechnoList): string => {
-    switch (techno) {
+    switch (enumTechno) {
       case TechnoList.JAVASCRIPT:
         return "#F7DF1E";
       case TechnoList.TYPESCRIPT:
         return "#3178C6";
+      case TechnoList.NEXTJS:
+        return "#FFF";
+      case TechnoList.NESTJS:
+        return "#E0234E";
+      case TechnoList.FIGMA:
+        return "#F24E1E";
       case TechnoList.PYTHON:
         return "#3776AB";
       case TechnoList.PHP:
@@ -129,8 +138,14 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
       );
     case TechnoList.TYPESCRIPT:
       return <SiTypescript className={className} size={size} color={color} />;
+    case TechnoList.NEXTJS:
+      return <RiNextjsFill className={className} size={size} color={color} />;
+    case TechnoList.NESTJS:
+      return <SiNestjs className={className} size={size} color={color} />;
     case TechnoList.PYTHON:
       return <IoLogoPython className={className} size={size} color={color} />;
+    case TechnoList.FIGMA:
+      return <SiFigma className={className} size={size} color={color} />;
     case TechnoList.PHP:
       return <SiPhp className={className} size={size} color={color} />;
     case TechnoList.RUBY:
