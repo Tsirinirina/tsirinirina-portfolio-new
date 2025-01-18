@@ -1,6 +1,6 @@
 import { Text } from "@/components/text/text";
 import styles from "./last-work.module.css";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { IoLogoReact, IoLogoWordpress } from "react-icons/io5";
 import { TechnoList } from "@/utils/techno.list";
@@ -72,12 +72,14 @@ export const LastWork: React.FC<LastWorkProps> = ({
         </Text.Description>
         <div className={styles.techno}>
           {technoList.map((item, _i) => (
-            <LogoTechno
-              techno={item}
-              size={36}
-              colorized={true}
-              key={`${_i}_icons`}
-            />
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <LogoTechno
+                techno={item}
+                size={36}
+                colorized={true}
+                key={`${_i}_icons`}
+              />
+            </motion.div>
           ))}
         </div>
       </div>

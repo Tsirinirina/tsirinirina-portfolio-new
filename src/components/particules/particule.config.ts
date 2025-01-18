@@ -2,7 +2,8 @@ export const particuleConfig = {
   autoPlay: true,
   background: {
     color: {
-      value: "#111827",
+      // value: "#111827",
+      value: "#02040bd4",
     },
     image: "",
     position: "",
