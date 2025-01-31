@@ -23,7 +23,9 @@ const PreviewLink: React.FC<PreviewLinkProps> = ({ previewUrl }) => {
         <span className={styles.circle} aria-hidden="true">
           <span className={`${styles.icon} ${styles.arrow}`}></span>
         </span>
-        <span className={`${styles.buttonText} lexend-deca`}>Voir demo</span>
+        <span className={`${styles.buttonText} lexend-deca`}>
+          Voir l'aperçu
+        </span>
       </button>
 
       {isModalOpen && (
