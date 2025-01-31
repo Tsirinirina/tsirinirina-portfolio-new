@@ -2,6 +2,7 @@ export const particuleConfig = {
   autoPlay: true,
   background: {
     color: {
+      // value: "#111827bf",
       // value: "#111827",
       value: "#02040bd4",
     },

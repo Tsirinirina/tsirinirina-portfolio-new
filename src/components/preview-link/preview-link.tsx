@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./preview-link.module.css";
+import Loader from "../loader/loader";
 
 interface PreviewLinkProps {
   previewUrl: string;
@@ -7,9 +8,14 @@ interface PreviewLinkProps {
 
 const PreviewLink: React.FC<PreviewLinkProps> = ({ previewUrl }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // State to track iframe loading
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleIframeLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
     <>
@@ -26,6 +32,11 @@ const PreviewLink: React.FC<PreviewLinkProps> = ({ previewUrl }) => {
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}
           >
+            {isLoading && (
+              <div className={styles.loader}>
+                <Loader size={32} />
+              </div>
+            )}{" "}
             <iframe
               src={previewUrl}
               width="100%"
@@ -33,9 +44,11 @@ const PreviewLink: React.FC<PreviewLinkProps> = ({ previewUrl }) => {
               frameBorder="0"
               allowFullScreen
               title="Aperçu du site Web"
+              onLoad={handleIframeLoad}
+              style={{ display: isLoading ? "none" : "block" }}
             />
             <button className={styles.closeButton} onClick={closeModal}>
-              Ferner
+              Fermer
             </button>
           </div>
         </div>
