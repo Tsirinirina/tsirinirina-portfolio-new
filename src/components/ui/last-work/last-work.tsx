@@ -1,6 +1,6 @@
 import { Text } from "@/components/text/text";
 import styles from "./last-work.module.css";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { IoLogoReact, IoLogoWordpress } from "react-icons/io5";
 import { TechnoList } from "@/utils/techno.list";
@@ -71,22 +71,25 @@ export const LastWork: React.FC<LastWorkProps> = ({
         >
           {projetDescription}
         </Text.Description>
-        <div className={styles.footer}>
-          <div className={styles.techno}>
-            {technoList.map((item, _i) => (
+        <div className={styles.techno}>
+          {technoList.map((item, _i) => (
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
               <LogoTechno
                 techno={item}
                 size={36}
                 colorized={true}
                 key={`${_i}_icons`}
               />
-            ))}
-          </div>
-          <div className={styles.workLink}>
-            <PreviewLink previewUrl="https://preview-ap-solutions.itras.mg/" />
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+{
+  /* <div className={styles.workLink}>
+<PreviewLink previewUrl="https://preview-ap-solutions.itras.mg/" />
+</div> */
+}

@@ -50,14 +50,12 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
   size = 24,
   colorized = true,
 }) => {
-  // Convertir une chaîne en valeur de l'énumération
   const mapStringToEnum = (value: string): TechnoList | undefined => {
     return Object.values(TechnoList).includes(value as TechnoList)
       ? (value as TechnoList)
       : undefined;
   };
 
-  // Obtenir la valeur de l'énumération ou une valeur par défaut
   const enumTechno = mapStringToEnum(techno) ?? TechnoList.ANGULAR;
 
   const getColor = (enumTechno: TechnoList): string => {
@@ -129,7 +127,7 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
     }
   };
 
-  const color = colorized ? getColor(enumTechno) : undefined; // Détermine la couleur en fonction de la propriété `colorized`
+  const color = colorized ? getColor(enumTechno) : undefined;
 
   switch (enumTechno) {
     case TechnoList.JAVASCRIPT:
