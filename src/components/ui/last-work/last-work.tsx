@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { IoLogoReact, IoLogoWordpress } from "react-icons/io5";
 import { TechnoList } from "@/utils/techno.list";
 import LogoTechno from "@/components/logo-techno/logo-techno";
+import PreviewLink from "@/components/preview-link/preview-link";
 
 interface LastWorkProps {
   projectTitle: string;
@@ -70,15 +71,20 @@ export const LastWork: React.FC<LastWorkProps> = ({
         >
           {projetDescription}
         </Text.Description>
-        <div className={styles.techno}>
-          {technoList.map((item, _i) => (
-            <LogoTechno
-              techno={item}
-              size={36}
-              colorized={true}
-              key={`${_i}_icons`}
-            />
-          ))}
+        <div className={styles.footer}>
+          <div className={styles.techno}>
+            {technoList.map((item, _i) => (
+              <LogoTechno
+                techno={item}
+                size={36}
+                colorized={true}
+                key={`${_i}_icons`}
+              />
+            ))}
+          </div>
+          <div className={styles.workLink}>
+            <PreviewLink previewUrl="https://preview-ap-solutions.itras.mg/" />
+          </div>
         </div>
       </div>
     </div>

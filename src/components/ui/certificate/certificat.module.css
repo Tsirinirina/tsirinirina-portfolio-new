@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: auto;
+  background: var(--container-bg-dark);
+  min-height: 100px;
+  padding: 50px 25px;
+  text-align: justify;
+  display: grid;
+  margin: 40px 0;
+}

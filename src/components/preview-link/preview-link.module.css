@@ -1,0 +1,136 @@
+.learnMore {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+}
+
+.learnMore {
+  width: 100%;
+  min-width: 130px;
+  height: auto;
+}
+
+.learnMore .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--dark-hover);
+  border-radius: 1.625rem;
+}
+
+.learnMore .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: var(--light);
+}
+
+.learnMore .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 2px;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.learnMore .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid var(--light);
+  border-right: 0.125rem solid var(--light);
+  transform: rotate(45deg);
+}
+
+.learnMore .buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  bottom: 0;
+
+  color: var(--light);
+  font-weight: 100;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.learnMore:hover .circle {
+  width: 100%;
+}
+
+.learnMore:hover .circle .icon.arrow {
+  background: var(--light);
+  transform: translate(1rem, 0);
+}
+
+.learnMore:hover .buttonText {
+  color: var(--light);
+}
+
+.learnMore {
+  /* Your existing button styles */
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: var(--container-bg-dark);
+  padding: 5px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: none;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--dark-hover);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: var(--dark);
+}
+
+@media only screen and (max-width: 768px) {
+  .modalContent {
+    width: 98%;
+    height: 98vh;
+  }
+}

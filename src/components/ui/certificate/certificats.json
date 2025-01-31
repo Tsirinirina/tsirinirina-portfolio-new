@@ -1,0 +1,22 @@
+{
+  "certificats": [
+    {
+      "name": "Licence professionnelle en Génie Logiciel",
+      "institute": "IES-AV (Institut d’Enseignement Supérieur d’Antsirabe Vakinankaratra)",
+      "description": "",
+      "type": "DIPLOMA",
+      "startDate": "2023-11-01",
+      "endDate": "2024-01-01",
+      "fullDate": true
+    },
+    {
+      "name": "Diplômé du Baccalauréat Série D",
+      "institute": "LMA (Lycée Moderne Ampefiloha)",
+      "description": "",
+      "type": "CERTIFICATION",
+      "startDate": "2015-01-01",
+      "endDate": "2015-01-01",
+      "fullDate": false
+    }
+  ]
+}

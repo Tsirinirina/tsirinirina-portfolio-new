@@ -41,6 +41,12 @@
   line-height: 18px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .techno {
   display: flex;
   flex-direction: row;
@@ -57,5 +63,12 @@
     display: flex;
     align-items: flex-start;
     max-width: 100%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
