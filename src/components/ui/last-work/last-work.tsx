@@ -74,7 +74,11 @@ export const LastWork: React.FC<LastWorkProps> = ({
         <div className={styles.footer}>
           <div className={styles.techno}>
             {technoList.map((item, _i) => (
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                key={`icon_motion_${_i}`}
+              >
                 <LogoTechno
                   techno={item}
                   size={36}

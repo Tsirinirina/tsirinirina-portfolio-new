@@ -1,12 +1,21 @@
 {
   "certificats": [
     {
+      "name": "Master en Génie Logiciel",
+      "institute": "CNTMAD ",
+      "description": "",
+      "type": "DIPLOMA",
+      "startDate": "2024-11-01",
+      "endDate": "",
+      "fullDate": false
+    },
+    {
       "name": "Licence professionnelle en Génie Logiciel",
       "institute": "IES-AV (Institut d’Enseignement Supérieur d’Antsirabe Vakinankaratra)",
       "description": "",
       "type": "DIPLOMA",
-      "startDate": "2023-11-01",
-      "endDate": "2024-01-01",
+      "startDate": "2023-09-01",
+      "endDate": "2024-06-01",
       "fullDate": true
     },
     {
@@ -15,8 +24,8 @@
       "description": "",
       "type": "CERTIFICATION",
       "startDate": "2015-01-01",
-      "endDate": "2015-01-01",
-      "fullDate": false
+      "endDate": "2015-04-01",
+      "fullDate": true
     }
   ]
 }

@@ -1,28 +1,43 @@
 import { Text } from "@/components/text/text";
 import styles from "./certificat.module.css";
-import data from "./certificats.json";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { LiaCertificateSolid } from "react-icons/lia";
+import CertificateList from "./certificate-list";
 
 interface CertificateProps {}
 
 const Certificate: React.FC<CertificateProps> = ({}) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 1.1, y: -50 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        duration: 1,
+      }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`${styles.container} ${styles.bordered}`}
       id="myCertificates"
     >
-      <Text.Title
-        tag="h1"
-        fontWeight="bold"
-        fontFamily={""}
-        fontSize="36px"
-        className={`lato ${styles.title}`}
-      >
-        Mes Diplômes
-      </Text.Title>
-      {data.certificats.map((i) => (
-        <li>{i.name}</li>
-      ))}
-    </div>
+      <div className={styles.header}>
+        <LiaCertificateSolid size={64} className={styles.icon} />
+        <Text.Title
+          tag="h1"
+          fontWeight="bold"
+          fontFamily={""}
+          fontSize="28px"
+          className={`lexend-deca ${styles.title}`}
+        >
+          Mes Diplômes
+        </Text.Title>
+      </div>
+      <div className={`lato ${styles.content}`}>
+        <CertificateList />
+      </div>
+    </motion.div>
   );
 };
 

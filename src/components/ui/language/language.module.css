@@ -3,13 +3,32 @@
   height: auto;
   background: var(--container-bg-dark);
   min-height: 100px;
-  padding: 40px 50px;
+  padding: 40px 20px;
   text-align: justify;
-  display: grid;
+
   list-style: none;
+  /* Absolute */
+  position: relative;
 }
 
 .bordered {
-  /* border: 1px solid var(--container-border); */
   border-radius: 6px;
+}
+
+.header {
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  background: var(--container-title-bg);
+  padding-left: 30px;
+}
+
+.icon {
+  position: absolute;
+  top: -28px;
+  left: 0;
+}
+
+.content {
+  padding: 0 30px;
 }
