@@ -1,0 +1,151 @@
+{
+  "technicalSkills": {
+    "programmingLanguages": [
+      {
+        "language": "JavaScript",
+        "percentage": "80%",
+        "ranking": "Avancée"
+      },
+      {
+        "language": "Python",
+        "percentage": "50%",
+        "ranking": "Intermédiaire"
+      },
+      {
+        "language": "Java",
+        "percentage": "40%",
+        "ranking": "Intermédiaire"
+      },
+      {
+        "language": "C++",
+        "percentage": "0%",
+        "ranking": "Débutant"
+      }
+    ],
+    "webDevelopment": {
+      "frontEnd": [
+        {
+          "technology": "HTML",
+          "percentage": "90%",
+          "ranking": "Expert"
+        },
+        {
+          "technology": "CSS",
+          "percentage": "85%",
+          "ranking": "Avancée"
+        },
+        {
+          "technology": "ReactJs",
+          "percentage": "70%",
+          "ranking": "Intermédiaire"
+        },
+        {
+          "technology": "NextJs",
+          "percentage": "80%",
+          "ranking": "Avancée"
+        },
+        {
+          "technology": "AngularJS",
+          "percentage": "23%",
+          "ranking": "Intermédiaire"
+        }
+      ],
+      "backEnd": [
+        {
+          "technology": "Node.js",
+          "percentage": "65%",
+          "ranking": "Intermédiaire"
+        },
+
+        {
+          "technology": "NestJs",
+          "percentage": "65%",
+          "ranking": "Intermédiaire"
+        },
+        {
+          "technology": "Node.js",
+          "percentage": "65%",
+          "ranking": "Intermédiaire"
+        },
+        {
+          "technology": "Laravel",
+          "percentage": "45%",
+          "ranking": "Intermédiaire"
+        },
+        {
+          "technology": "Symfony 5,6",
+          "percentage": "45%",
+          "ranking": "Intermédiaire"
+        }
+      ]
+    },
+    "databaseManagement": [
+      {
+        "technology": "MySQL",
+        "percentage": "80%",
+        "ranking": "Avancée"
+      },
+      {
+        "technology": "MongoDB",
+        "percentage": "70%",
+        "ranking": "Intermédiaire"
+      },
+      {
+        "technology": "PostGres",
+        "percentage": "30%",
+        "ranking": "Débutant"
+      }
+    ],
+    "versionControl": [
+      {
+        "technology": "Git",
+        "percentage": "85%",
+        "ranking": "Avancée"
+      },
+      {
+        "technology": "GitHub",
+        "percentage": "85%",
+        "ranking": "Avancée"
+      }
+    ],
+    "cloudComputing": [
+      {
+        "technology": "AWS",
+        "percentage": "0%",
+        "ranking": "Débutant"
+      },
+      {
+        "technology": "Azure",
+        "percentage": "0%",
+        "ranking": "Débutant"
+      }
+    ]
+  },
+  "languageSkills": [
+    {
+      "name": "Malagasy",
+      "ranking": "Langue maternelle",
+      "percentage": "80%",
+      "flag": "madagascar"
+    },
+    {
+      "name": "French",
+      "ranking": "Professionnel, Conversationnel",
+      "percentage": "65%",
+      "flagName": "france"
+    },
+    {
+      "name": "English",
+      "ranking": "Professionnel, Débutant",
+      "percentage": "40%",
+      "flagName": "united-kingdom"
+    }
+  ],
+  "softSkills": [
+    "Team collaboration",
+    "Problem-solving",
+    "Communication",
+    "Time management",
+    "Adaptability"
+  ]
+}

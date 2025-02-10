@@ -13,6 +13,7 @@ import { LastWork } from "../ui/last-work/last-work";
 import lastWork from "./last-work.json";
 import Certificate from "../ui/certificate/certificate";
 import Espacer from "../espacer/espacer";
+import CertificatsContainer from "../ui/certificats-container/certificat-container";
 
 export default function Portfolio() {
   return (
@@ -37,17 +38,7 @@ export default function Portfolio() {
           startDate={lastWork.startDate}
         />
         <Espacer size="lg" />
-        {/* <section
-          id="myCertificates"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "20px",
-          }}
-        >
-          <Certificate />
-          <Certificate />
-        </section> */}
+        <CertificatsContainer />
 
         <section
           id="mywork"
