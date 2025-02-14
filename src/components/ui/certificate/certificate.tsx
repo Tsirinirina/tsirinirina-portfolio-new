@@ -31,7 +31,7 @@ const Certificate: React.FC<CertificateProps> = ({}) => {
           fontSize="28px"
           className={`lexend-deca ${styles.title}`}
         >
-          Mes Diplômes
+          Mes Diplômes & Certificats
         </Text.Title>
       </div>
       <div className={`lato ${styles.content}`}>

@@ -3,6 +3,7 @@ import styles from "./language.module.css";
 import data from "./skills.json";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaCertificateSolid } from "react-icons/lia";
+import LanguageList from "./language.list";
 
 interface LanguageProps {}
 
@@ -34,9 +35,7 @@ const Language: React.FC<LanguageProps> = ({}) => {
         </Text.Title>
       </div>
       <div className={`lato ${styles.content}`}>
-        {data.languageSkills.map((i, _index) => (
-          <li key={`language_${_index}`}>{i.name}</li>
-        ))}
+        <LanguageList />
       </div>
     </motion.div>
   );

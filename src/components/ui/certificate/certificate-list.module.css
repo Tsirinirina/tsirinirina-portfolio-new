@@ -1,0 +1,40 @@
+.list {
+  margin: 15px 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.period {
+  color: var(--gray-hover);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.pending {
+  background-color: var(--neon-blue-bg);
+  padding: 2px 5px;
+  border-radius: 15px;
+}
+
+.institut {
+  font-weight: 300;
+  padding-left: 35px;
+}
+
+.list::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c"; /* Icône "check" */
+  font-weight: 900;
+  margin-right: 10px;
+}
