@@ -14,6 +14,7 @@ import lastWork from "./last-work.json";
 import Certificate from "../ui/certificate/certificate";
 import Espacer from "../espacer/espacer";
 import CertificatsContainer from "../ui/certificats-container/certificat-container";
+import ProjectsContainer from "../ui/projects-container/projects.container";
 
 export default function Portfolio() {
   return (
@@ -30,8 +31,8 @@ export default function Portfolio() {
         </section>
         <SkillsContainer />
         <LastWork
-          projectTitle={lastWork.projectTitle}
-          projetDescription={lastWork.projectdescription}
+          projectTitle={lastWork.title}
+          projetDescription={lastWork.description}
           technoList={lastWork.technoList}
           clientInformation={lastWork.clientInformation}
           publishDate={lastWork.publishDate}
@@ -39,7 +40,7 @@ export default function Portfolio() {
         />
         <Espacer size="lg" />
         <CertificatsContainer />
-
+        <ProjectsContainer />
         <section
           id="mywork"
           style={{
