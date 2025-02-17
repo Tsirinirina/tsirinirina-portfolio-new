@@ -1,17 +1,21 @@
 import styles from "./projet.module.css";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LogoTechno from "@/components/logo-techno/logo-techno";
 import PreviewLink from "@/components/preview-link/preview-link";
 import { Text } from "@/components/text/text";
 import Image from "next/image";
 import placeholderImage from "../../../../public/placeholder.png";
 import UseWindowSize from "@/hooks/window.size";
-
+import { FaRegClipboard } from "react-icons/fa";
+import { LuClipboardCheck } from "react-icons/lu";
 interface ProjectProps {
   title: string;
   shortTitle: string;
   description: string;
+  projectLink: string;
+  projectVersion?: string;
+  status: string;
   coverImage: string;
   clientInformation?: string;
   technoList: string[];
@@ -25,6 +29,9 @@ const Project: React.FC<ProjectProps> = ({
   title,
   shortTitle,
   description,
+  projectLink,
+  projectVersion,
+  status,
   coverImage,
   clientInformation,
   technoList,
@@ -36,16 +43,39 @@ const Project: React.FC<ProjectProps> = ({
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true });
   const windowsSize = UseWindowSize().width;
+  const [linkCopied, setLinkCopied] = useState<string>("");
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setLinkCopied(text);
+      })
+      .catch((err) => {
+        console.error("Failed to copy:", err);
+      });
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (linkCopied) {
+        setLinkCopied("");
+      }
+    }, 5000);
+  }, [linkCopied]);
+
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
       className={`${size === "MD" ? styles.md : styles.lg} ${styles.container}`}
       id={`projet-${title}`}
     >
       <div className={styles.imageContainer}>
         <Image
           src={placeholderImage.src}
-          width={windowsSize > 736 ? 300 : 400}
-          height={250}
+          width={windowsSize > 736 ? 320 : 400}
+          height={210}
           alt={""}
           className={styles.image}
         />
@@ -71,6 +101,7 @@ const Project: React.FC<ProjectProps> = ({
           fontFamily={""}
           fontSize="16px"
           className={`lato ${styles.description}`}
+          textLength={31}
         >
           {description}
         </Text.Description>
@@ -84,7 +115,7 @@ const Project: React.FC<ProjectProps> = ({
               >
                 <LogoTechno
                   techno={item}
-                  size={36}
+                  size={28}
                   colorized={true}
                   key={`${_i}_icons`}
                 />
@@ -92,11 +123,25 @@ const Project: React.FC<ProjectProps> = ({
             ))}
           </div>
           <div className={styles.workLink}>
+            <div className={styles.link}>
+              <a className={`lato`} href={projectLink}>
+                {projectLink}
+              </a>
+              {linkCopied !== "" ? (
+                <LuClipboardCheck size={18} className={styles.copy} />
+              ) : (
+                <FaRegClipboard
+                  size={18}
+                  onClick={() => copyToClipboard(projectLink)}
+                  className={styles.copy}
+                />
+              )}
+            </div>
             <PreviewLink previewUrl="https://preview-ap-solutions.itras.mg/" />
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

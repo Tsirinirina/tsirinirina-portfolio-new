@@ -10,6 +10,24 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
+      "priority": "normal"
+    },
+    {
+      "title": "Titre du projet",
+      "shortTitle": "Titre court",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, sapiente praesentium? Eius sed nisi, maxime similique labore iste voluptatem deleniti eveniet illo natus aperiam placeat corporis. Incidunt voluptates cum minima est, corporis sapiente deserunt aliquam illum, nesciunt dolorem quo nemo, omnis quos numquam! Exercitationem nesciunt quo illo ducimus laudantium necessitatibus!",
+      "startDate": "2024-11-11",
+      "publishDate": "2024-12-20",
+      "technoList": ["WORDPRESS", "NEXT"],
+      "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
+      "logoUri": "",
+      "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "DEV",
       "priority": "normal"
     },
     {
@@ -22,6 +40,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
     {
@@ -34,18 +55,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
-      "priority": "normal"
-    },
-    {
-      "title": "Titre du projet",
-      "shortTitle": "Titre court",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore itaque possimus modi neque consectetur unde repudiandae, temporibus laudantium corrupti qui harum sapiente, dolorem iste deserunt quod nesciunt debitis nulla aut?",
-      "startDate": "2024-11-11",
-      "publishDate": "2024-12-20",
-      "technoList": ["WORDPRESS", "NEXT"],
-      "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
-      "logoUri": "",
-      "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
     {
@@ -58,6 +70,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "ITRAS, Manae Business",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "high"
     },
     {
@@ -70,6 +85,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
     {
@@ -82,6 +100,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
     {
@@ -94,6 +115,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
 
@@ -107,6 +131,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR"],
       "logoUri": "",
       "clientInformation": "ITRAS, Manae Business",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "high"
     },
     {
@@ -119,6 +146,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     },
     {
@@ -131,6 +161,9 @@
       "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
       "logoUri": "",
       "clientInformation": "Entreprise",
+      "link": "http://lien-vers-la-page-a-copier.com",
+      "version": "1.00",
+      "status": "PROD",
       "priority": "normal"
     }
   ]

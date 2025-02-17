@@ -10,6 +10,7 @@ export namespace Text {
     className?: any;
     customStyles?: React.CSSProperties;
     fontFamily?: any;
+    textLength?: number;
   };
 
   type TitleProps = {
@@ -96,8 +97,21 @@ export namespace Text {
     color = "inherit",
     className = "",
     customStyles = {},
+    textLength = 50,
     fontFamily,
   }) => {
+    const breakText = (text: string) => {
+      const length = text.split(" ").length;
+      const slicedText = text
+        .split(" ")
+        .slice(0, textLength)
+        .join(" ")
+        .concat("...");
+      if (length > 31) {
+        return slicedText;
+      }
+      return text;
+    };
     return (
       <p
         className={`text-description ${className || ""}`}
@@ -110,7 +124,7 @@ export namespace Text {
           ...customStyles,
         }}
       >
-        {children}
+        {breakText(children as any)}
       </p>
     );
   };
