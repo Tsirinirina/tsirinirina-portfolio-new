@@ -83,9 +83,9 @@ const Project: React.FC<ProjectProps> = ({
       <div className={styles.content}>
         <div className={styles.work}>
           <Text.Subtitle
-            fontWeight="bold"
+            fontWeight="400"
             fontFamily={""}
-            fontSize="28px"
+            fontSize="24px"
             className={`lexend-deca ${styles.subtitle}`}
           >
             {title}
@@ -97,7 +97,7 @@ const Project: React.FC<ProjectProps> = ({
         </div>
 
         <Text.Description
-          fontWeight="400"
+          fontWeight="300"
           fontFamily={""}
           fontSize="16px"
           className={`lato ${styles.description}`}

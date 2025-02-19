@@ -4,8 +4,8 @@ import data from "./projects.json";
 const ProjectsContainer: React.FC<{}> = ({}) => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}></div>
-      <div className={styles.filter}></div>
+      <div className={styles.title}>TITRE</div>
+      <div className={styles.filter}>FILTRE</div>
       <div className={styles.content}>
         {data.projects.map((item, _i) => (
           <Project
@@ -39,7 +39,7 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
           size={data.projects[0].priority === "high" ? "LG" : "MD"}
         /> */}
       </div>
-      <div className={styles.pagination}></div>
+      <div className={styles.pagination}>PAGINATION</div>
     </div>
   );
 };
