@@ -76,8 +76,10 @@ const Project: React.FC<ProjectProps> = ({
           src={placeholderImage.src}
           width={windowsSize > 736 ? 320 : 400}
           height={210}
-          alt={""}
+          alt={"placeholderImage"}
           className={styles.image}
+          property="normal"
+          unoptimized={false}
         />
       </div>
       <div className={styles.content}>
@@ -101,7 +103,7 @@ const Project: React.FC<ProjectProps> = ({
           fontFamily={""}
           fontSize="16px"
           className={`lato ${styles.description}`}
-          textLength={31}
+          textLength={20}
         >
           {description}
         </Text.Description>

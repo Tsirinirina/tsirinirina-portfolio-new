@@ -107,7 +107,7 @@ export namespace Text {
         .slice(0, textLength)
         .join(" ")
         .concat("...");
-      if (length > 31) {
+      if (length > textLength) {
         return slicedText;
       }
       return text;

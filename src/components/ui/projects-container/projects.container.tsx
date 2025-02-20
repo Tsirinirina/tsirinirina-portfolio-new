@@ -1,11 +1,86 @@
+import { Text } from "@/components/text/text";
 import Project from "../project/project";
 import styles from "./projects.container.module.css";
 import data from "./projects.json";
+import { useEffect, useMemo, useState } from "react";
+
+interface DataTypes {
+  id: number;
+  type: string;
+  isActive: boolean;
+}
 const ProjectsContainer: React.FC<{}> = ({}) => {
+  const [types, setTypes] = useState<DataTypes[]>([
+    { id: 0, type: "Tous", isActive: true },
+  ]);
+
+  const enableLink = (id: number) => {
+    const newTypes = types.map((item) =>
+      item.id == id ? { ...item, isActive: true } : { ...item, isActive: false }
+    );
+    setTypes(newTypes);
+  };
+
+  useEffect(() => {
+    if (data.types) {
+      setTypes([
+        { id: 0, type: "Tous", isActive: true },
+        ...data.types.map((item, i) => ({
+          id: i + 1,
+          type: item,
+          isActive: false,
+        })),
+      ]);
+    }
+  }, [data]);
   return (
     <div className={styles.container}>
-      <div className={styles.title}>TITRE</div>
-      <div className={styles.filter}>FILTRE</div>
+      <div className={styles.title}>
+        <Text.Title
+          fontFamily={""}
+          fontSize="42px"
+          tag="h2"
+          className={`lexend-deca ${styles.subtitle}`}
+        >
+          Mes projets
+        </Text.Title>
+      </div>
+      <div className={styles.filter}>
+        {types &&
+          types.map((item, _i) => (
+            <span
+              key={`types-${_i}`}
+              className={item.isActive ? styles.active : styles.inactive}
+              onClick={() => enableLink(item.id)}
+            >
+              {item.type} /
+            </span>
+          ))}
+        {/* {allTypes &&
+          allTypes.map((item, _i) => (
+            <span
+              key={`types-${_i}`}
+              className={item.isActive ? styles.active : styles.inactive}
+              onClick={() => enableLink(item.id)}
+            >
+              {item.type} /
+            </span>
+          ))} */}
+        {/* <a
+          href="http://"
+          target="_blank"
+          key={`types-99`}
+          className={styles.active}
+        >
+          Tous /
+        </a>
+
+        {data.types?.map((type, _i) => (
+          <a href="http://" target="_blank" key={`types-${_i}`}>
+            {type} /
+          </a>
+        ))} */}
+      </div>
       <div className={styles.content}>
         {data.projects.map((item, _i) => (
           <Project
