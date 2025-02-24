@@ -3,16 +3,20 @@ import Project from "../project/project";
 import styles from "./projects.container.module.css";
 import data from "./projects.json";
 import { useEffect, useMemo, useState } from "react";
+import { Project as ProjectModel } from "@/services/api/project/project";
 
 interface DataTypes {
   id: number;
   type: string;
   isActive: boolean;
 }
+
 const ProjectsContainer: React.FC<{}> = ({}) => {
   const [types, setTypes] = useState<DataTypes[]>([
     { id: 0, type: "Tous", isActive: true },
   ]);
+
+  const [projects, setProjects] = useState<ProjectModel[]>(data.projects);
 
   const enableLink = (id: number) => {
     const newTypes = types.map((item) =>
@@ -32,7 +36,23 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
         })),
       ]);
     }
-  }, [data]);
+  }, []);
+
+  const filterProject = (item: string) => {
+    if (projects) {
+      if (item === "Tous") {
+        setProjects(data.projects);
+      } else {
+        const projectFiltered = data.projects.filter(
+          (project) =>
+            project.type.toString().toLowerCase() ===
+            item.toString().toLowerCase()
+        );
+        setProjects(projectFiltered);
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -51,7 +71,10 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
             <span
               key={`types-${_i}`}
               className={item.isActive ? styles.active : styles.inactive}
-              onClick={() => enableLink(item.id)}
+              onClick={() => {
+                enableLink(item.id);
+                filterProject(item.type);
+              }}
             >
               {item.type} /
             </span>
@@ -82,7 +105,7 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
         ))} */}
       </div>
       <div className={styles.content}>
-        {data.projects.map((item, _i) => (
+        {projects.map((item, _i) => (
           <Project
             key={`projet_item_${_i}`}
             title={item.title}
