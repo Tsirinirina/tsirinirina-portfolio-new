@@ -78,8 +78,7 @@ const Project: React.FC<ProjectProps> = ({
           height={210}
           alt={"placeholderImage"}
           className={styles.image}
-          property="normal"
-          unoptimized={false}
+          priority
         />
       </div>
       <div className={styles.content}>

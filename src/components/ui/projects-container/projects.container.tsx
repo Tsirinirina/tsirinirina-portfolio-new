@@ -4,6 +4,7 @@ import styles from "./projects.container.module.css";
 import data from "./projects.json";
 import { useEffect, useMemo, useState } from "react";
 import { Project as ProjectModel } from "@/services/api/project/project";
+import Loader from "@/components/loader/loader";
 
 interface DataTypes {
   id: number;
@@ -12,6 +13,7 @@ interface DataTypes {
 }
 
 const ProjectsContainer: React.FC<{}> = ({}) => {
+  const [loading, setLoading] = useState<boolean>(true);
   const [types, setTypes] = useState<DataTypes[]>([
     { id: 0, type: "Tous", isActive: true },
   ]);
@@ -19,6 +21,7 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
   const [projects, setProjects] = useState<ProjectModel[]>(data.projects);
 
   const enableLink = (id: number) => {
+    setLoading(true);
     const newTypes = types.map((item) =>
       item.id == id ? { ...item, isActive: true } : { ...item, isActive: false }
     );
@@ -26,6 +29,9 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
   };
 
   useEffect(() => {
+    if (data.projects) {
+      setLoading(false);
+    }
     if (data.types) {
       setTypes([
         { id: 0, type: "Tous", isActive: true },
@@ -40,6 +46,7 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
 
   const filterProject = (item: string) => {
     if (projects) {
+      setLoading(false);
       if (item === "Tous") {
         setProjects(data.projects);
       } else {
@@ -79,67 +86,43 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
               {item.type} /
             </span>
           ))}
-        {/* {allTypes &&
-          allTypes.map((item, _i) => (
-            <span
-              key={`types-${_i}`}
-              className={item.isActive ? styles.active : styles.inactive}
-              onClick={() => enableLink(item.id)}
-            >
-              {item.type} /
-            </span>
-          ))} */}
-        {/* <a
-          href="http://"
-          target="_blank"
-          key={`types-99`}
-          className={styles.active}
-        >
-          Tous /
-        </a>
+      </div>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className={styles.content}>
+          {projects.length > 0 ? (
+            projects.map((item, _i) => (
+              <Project
+                key={`projet_item_${_i}`}
+                title={item.title}
+                description={item.description}
+                coverImage={""}
+                shortTitle={item.shortTitle}
+                technoList={item.technoList}
+                technoElements={item.technoElements}
+                clientInformation={item.clientInformation}
+                publishDate={item.publishDate}
+                startDate={item.startDate}
+                size={item.priority === "high" ? "LG" : "MD"}
+                projectLink={item.link}
+                projectVersion={item.version}
+                status={item.status}
+              />
+            ))
+          ) : (
+            <NoData />
+          )}
+        </div>
+      )}
 
-        {data.types?.map((type, _i) => (
-          <a href="http://" target="_blank" key={`types-${_i}`}>
-            {type} /
-          </a>
-        ))} */}
-      </div>
-      <div className={styles.content}>
-        {projects.map((item, _i) => (
-          <Project
-            key={`projet_item_${_i}`}
-            title={item.title}
-            description={item.description}
-            coverImage={""}
-            shortTitle={item.shortTitle}
-            technoList={item.technoList}
-            technoElements={item.technoElements}
-            clientInformation={item.clientInformation}
-            publishDate={item.publishDate}
-            startDate={item.startDate}
-            size={item.priority === "high" ? "LG" : "MD"}
-            projectLink={item.link}
-            projectVersion={item.version}
-            status={item.status}
-          />
-        ))}
-        {/* <Project
-          key={`projet_item_${1}`}
-          title={data.projects[0].title}
-          description={data.projects[1].description}
-          coverImage={""}
-          shortTitle={data.projects[0].shortTitle}
-          technoList={data.projects[0].technoList}
-          technoElements={data.projects[0].technoElements}
-          clientInformation={data.projects[0].clientInformation}
-          publishDate={data.projects[0].publishDate}
-          startDate={data.projects[0].startDate}
-          size={data.projects[0].priority === "high" ? "LG" : "MD"}
-        /> */}
-      </div>
-      <div className={styles.pagination}>PAGINATION</div>
+      {/* <div className={styles.pagination}>PAGINATION</div> */}
     </div>
   );
 };
 
 export default ProjectsContainer;
+
+const NoData = () => (
+  <div className={`${styles.noData} lexend-deca`}>Aucune données</div>
+);
