@@ -9,7 +9,6 @@
 
 .header {
   /* background-color: var(--neon-blue-bg); */
-  background-color: var(--dark-hover);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -17,6 +16,14 @@
   justify-content: space-between;
   gap: 10px;
   border-radius: 5px;
+}
+
+.disable {
+  background-color: var(--dark-hover);
+}
+
+.active {
+  background-color: var(--primary-hover-bg);
 }
 
 .header .right {

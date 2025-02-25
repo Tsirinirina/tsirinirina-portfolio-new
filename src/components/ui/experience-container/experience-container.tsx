@@ -2,11 +2,22 @@ import { DateFormat } from "@/utils/date.utils";
 import Experience from "../experience/experience";
 import styles from "./experience-container.module.css";
 import data from "./experiences.json";
+import { Text } from "@/components/text/text";
 interface ExperienceContainerProps {}
 
 const ExperienceContainer: React.FC<ExperienceContainerProps> = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        <Text.Title
+          fontFamily={""}
+          fontSize="42px"
+          tag="h2"
+          className={`gabarito ${styles.subtitle}`}
+        >
+          Expériences Professionnelles
+        </Text.Title>
+      </div>
       {data.experiences.map((item, _i) => (
         <Experience
           key={`xp_${_i}`}

@@ -39,7 +39,11 @@ const Experience: React.FC<ExperienceProps> = ({
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className={styles.container}
     >
-      <div className={`${styles.header} lexend-deca`}>
+      <div
+        className={`${styles.header} ${
+          isCollapse ? styles.active : styles.disable
+        } lexend-deca`}
+      >
         <div className={styles.right}>
           <div className={styles.position}>{position}</div>
           <div className={styles.date}>
