@@ -37,7 +37,7 @@ const Navlinks = () => {
         </Link>
         <Link
           href="#"
-          onClick={() => handleScroll("professional-expertise")}
+          onClick={() => handleScroll("experience-expertise")}
           className={styles.navLink}
         >
           /Expérience

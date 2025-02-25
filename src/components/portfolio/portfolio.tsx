@@ -15,6 +15,7 @@ import Certificate from "../ui/certificate/certificate";
 import Espacer from "../espacer/espacer";
 import CertificatsContainer from "../ui/certificats-container/certificat-container";
 import ProjectsContainer from "../ui/projects-container/projects.container";
+import ExperienceContainer from "../ui/experience-container/experience-container";
 
 export default function Portfolio() {
   return (
@@ -41,8 +42,9 @@ export default function Portfolio() {
         <Espacer size="lg" />
         <CertificatsContainer />
         <ProjectsContainer />
+        <ExperienceContainer />
         <section
-          id="mywork"
+          id="experience-expertise"
           style={{
             height: "300px",
             width: "100%",
@@ -50,18 +52,7 @@ export default function Portfolio() {
             background: "#37334957",
           }}
         >
-          PROJECTS RÉALISÉ
-        </section>
-        <section
-          id="professional-expertise"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 0",
-            background: "#37334957",
-          }}
-        >
-          PROFESSIONAL EXPERTISE
+          experience EXPERTISE
         </section>
         <section
           id="formation"
