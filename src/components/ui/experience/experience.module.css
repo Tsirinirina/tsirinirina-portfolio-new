@@ -18,6 +18,12 @@
   border-radius: 5px;
 }
 
+.header:hover {
+  cursor: pointer;
+  background-color: var(--primary-bg);
+  transition: background-color 0.5s ease-in-out;
+}
+
 .disable {
   background-color: var(--dark-hover);
 }

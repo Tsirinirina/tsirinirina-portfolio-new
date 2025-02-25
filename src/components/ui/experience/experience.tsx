@@ -34,7 +34,7 @@ const Experience: React.FC<ExperienceProps> = ({
   };
   return (
     <motion.div
-      whileHover={{ scale: 1.09 }}
+      // whileHover={{ scale: 1.001 }}
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className={styles.container}
@@ -43,6 +43,7 @@ const Experience: React.FC<ExperienceProps> = ({
         className={`${styles.header} ${
           isCollapse ? styles.active : styles.disable
         } lexend-deca`}
+        onClick={handleCollapse}
       >
         <div className={styles.right}>
           <div className={styles.position}>{position}</div>
@@ -66,42 +67,50 @@ const Experience: React.FC<ExperienceProps> = ({
           )}
         </div>
       </div>
-      {isCollapse && (
-        <div className={styles.body}>
-          <div className={`${styles.company} source-code`}>
-            <div className={styles.companyName}>{companyName}</div>
-            <div className={styles.companyLocation}>
-              <FaLocationDot size={16} className={styles.locationIcon} />
-              <span>{location}</span>
+      <AnimatePresence initial={false}>
+        {isCollapse && (
+          <motion.div
+            className={styles.body}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <div className={`${styles.company} source-code`}>
+              <div className={styles.companyName}>{companyName}</div>
+              <div className={styles.companyLocation}>
+                <FaLocationDot size={16} className={styles.locationIcon} />
+                <span>{location}</span>
+              </div>
+              <div className={styles.contract}>{contractType}</div>
             </div>
-            <div className={styles.contract}>{contractType}</div>
-          </div>
-          <div className={styles.description}>{descriptions}</div>
-          <ul className={styles.missions}>
-            {missions.map((item, _i) => (
-              <li className={styles.mission} key={`mission_${_i}`}>
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className={styles.technoList}>
-            {technoList.map((item, _i) => (
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                key={`icon_motion_${_i}`}
-              >
-                <LogoTechno
-                  techno={item}
-                  size={28}
-                  colorized={true}
-                  key={`${_i}_icons`}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      )}
+            <div className={styles.description}>{descriptions}</div>
+            <ul className={styles.missions}>
+              {missions.map((item, _i) => (
+                <li className={styles.mission} key={`mission_${_i}`}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className={styles.technoList}>
+              {technoList.map((item, _i) => (
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  key={`icon_motion_${_i}`}
+                >
+                  <LogoTechno
+                    techno={item}
+                    size={28}
+                    colorized={true}
+                    key={`${_i}_icons`}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };
