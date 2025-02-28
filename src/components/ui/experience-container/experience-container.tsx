@@ -34,6 +34,7 @@ const ExperienceContainer: React.FC<ExperienceContainerProps> = () => {
           descriptions={item.description}
           missions={item.missions}
           technoList={item.technologies_used}
+          defaultCollapsed={_i === 0 ? true : false}
         />
       ))}
     </div>

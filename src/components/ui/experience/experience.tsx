@@ -15,6 +15,7 @@ interface ExperienceProps {
   descriptions: string;
   missions: string[];
   technoList: string[];
+  defaultCollapsed: boolean;
 }
 
 const Experience: React.FC<ExperienceProps> = ({
@@ -27,8 +28,9 @@ const Experience: React.FC<ExperienceProps> = ({
   location,
   missions,
   technoList,
+  defaultCollapsed,
 }) => {
-  const [isCollapse, setIsCollapse] = useState<boolean>(false);
+  const [isCollapse, setIsCollapse] = useState<boolean>(defaultCollapsed);
   const handleCollapse = () => {
     setIsCollapse(!isCollapse);
   };

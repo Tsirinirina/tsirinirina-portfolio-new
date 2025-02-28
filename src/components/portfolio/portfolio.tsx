@@ -16,6 +16,7 @@ import Espacer from "../espacer/espacer";
 import CertificatsContainer from "../ui/certificats-container/certificat-container";
 import ProjectsContainer from "../ui/projects-container/projects.container";
 import ExperienceContainer from "../ui/experience-container/experience-container";
+import InfoContainer from "../ui/info-container/info-container";
 
 export default function Portfolio() {
   return (
@@ -41,53 +42,13 @@ export default function Portfolio() {
         />
         <Espacer size="lg" />
         <CertificatsContainer />
+        <Espacer size="lg" />
         <ProjectsContainer />
+        <Espacer size="lg" />
         <ExperienceContainer />
-        <section
-          id="experience-expertise"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 0",
-            background: "#37334957",
-          }}
-        >
-          experience EXPERTISE
-        </section>
-        <section
-          id="formation"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 0",
-            background: "#37334957",
-          }}
-        >
-          FORMATION
-        </section>
-        <section
-          id="contact-form"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 0",
-            background: "#37334957",
-          }}
-        >
-          FORMULAIRE DE CONTACT
-        </section>
-        <section
-          id="about"
-          style={{
-            height: "300px",
-            width: "100%",
-            margin: "30px 0",
-            background: "#37334957",
-          }}
-        >
-          À Propos de Moi
-        </section>
+        <Espacer size="lg" />
       </main>
+      <InfoContainer />
     </div>
   );
 }
