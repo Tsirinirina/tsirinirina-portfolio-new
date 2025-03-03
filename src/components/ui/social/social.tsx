@@ -1,5 +1,6 @@
 import SocialIcon from "@/components/icons/social.icon";
 import styles from "./social.module.css";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
 interface SocialProps {
   type:
@@ -13,7 +14,9 @@ interface SocialProps {
     | "WhatsApp"
     | "Skype"
     | "Message"
-    | "Tel";
+    | "Tel"
+    | "Website"
+    | any;
   link: string;
 }
 
@@ -25,7 +28,7 @@ const Social: React.FC<SocialProps> = ({ type, link }) => {
       case "Outlook":
         return `mailto:${link}?subject=Contact%20depuis%20le%20portfolio&body=Bonjour,%20je%20souhaite%20en%20savoir%20plus."`;
       case "Facebook":
-        return `mailto:${link}`;
+        return `https://m.me/:${link}`;
       case "Messenger":
         return `https://m.me/${link}?ref=Bonjour`;
       case "Linkedin":
@@ -40,6 +43,8 @@ const Social: React.FC<SocialProps> = ({ type, link }) => {
         return `skype:link?chat${link}`;
       case "Tel":
         return `tel:${link}`;
+      case "Website":
+        return `${link}`;
       case "Message":
         return `sms:${link}?body=Bonjour,%20je%20viens%20de%20votre%20portfolio`;
       default:

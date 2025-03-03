@@ -3,7 +3,7 @@ import Project from "../project/project";
 import styles from "./projects.container.module.css";
 import data from "./projects.json";
 import { useEffect, useMemo, useState } from "react";
-import { Project as ProjectModel } from "@/services/api/project/project";
+import { Project as ProjectModel } from "@/services/project/project";
 import Loader from "@/components/loader/loader";
 
 interface DataTypes {

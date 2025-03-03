@@ -12,22 +12,45 @@
   "jobTitle": "Développeur Full Stack Javascript & App développeur",
   "description": "\n<h2 class='title'>Un Développeur Web & Mobile</h2>\n\t<p class='description'>Passionné par la programmation. Amoureux des nouveaux technologies.</p>\n\t<p>J'aime les défis. Motivé et disponible./>\n\t<p>Je suis un développeur Web et Mobile Junior.</p>\n\t<p>Étudiant diplômé d'une licence professionnelle en Génie logiciel à l'<b>Institut d'Enseignement Supérieur d'Antsirabe Vakinankaratra</b>.</p>",
   "slogan": "‘’ Ma passion m'a conduit vers le métier de développeur, où je transforme des idées en solutions créatives et modernes. ‘’",
+  "invitation": "",
   "socials": [
     {
-      "siteName": "Linkedin",
-      "siteIcon": "",
-      "url": "",
+      "name": "Linkedin",
+      "url": "patrick-rajaonarison-4a6662242",
       "username": "Patrick Rajaonarison"
     },
     {
-      "siteName": "Facebook",
-      "siteIcon": "",
-      "url": "",
+      "name": "Facebook",
+      "url": "tsiry.rajaonarson",
       "username": "Tsiry Rajaonarison"
     },
     {
-      "siteName": "Portfolio 1",
-      "siteIcon": "",
+      "name": "Messenger",
+      "url": "tsiry.rajaonarson",
+      "username": "Tsiry Rajaonarison"
+    },
+    {
+      "name": "Gmail",
+      "url": "parajaonarison@gmail.com",
+      "username": "Patrick Rajaonarison"
+    },
+    {
+      "name": "Github",
+      "url": "Tsirinirina",
+      "username": ""
+    },
+    {
+      "name": "Outlook",
+      "url": "tsirinirina.rajaonarison@itras-group.com",
+      "username": ""
+    },
+    {
+      "name": "WhatsApp",
+      "url": "+261329228172",
+      "username": ""
+    },
+    {
+      "name": "Portfolio 1",
       "url": "https://tsirinirina-patrick.netlify.app",
       "username": ""
     }

@@ -1,9 +1,11 @@
 import styles from "./citation.module.css";
 
-interface CitationProps {}
+interface CitationProps {
+  children: string;
+}
 
-const Citation: React.FC<CitationProps> = () => {
-  return <div className={styles.container}>Citation</div>;
+const Citation: React.FC<CitationProps> = ({ children }) => {
+  return <div className={styles.container}>{children}</div>;
 };
 
 export default Citation;

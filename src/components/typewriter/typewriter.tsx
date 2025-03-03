@@ -9,7 +9,12 @@ type TypewriterProps = {
   cursor?: boolean;
   fontSize?: string;
   fontWeight?: string;
-  fontFamily: "inconsolate" | "source-code" | "lato";
+  fontFamily:
+    | "inconsolate"
+    | "source-code"
+    | "lato"
+    | "lexend-deca"
+    | "gabarito";
 };
 
 export const Typewriter: React.FC<TypewriterProps> = ({
