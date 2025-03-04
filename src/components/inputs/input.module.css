@@ -10,19 +10,24 @@
   width: 100%;
   padding: 8px;
   font-size: 16px;
-  border: var(--b-gray-sm);
+  border: var(--b-dark-sm);
   border-radius: 4px;
   display: flex;
   align-items: center;
   align-content: center;
-  font-size: 12px;
+  font-size: 14px;
   height: 40px;
   outline: none;
-  background: var(--background);
-  color: var(--dark);
+  background: var(--blue-dark);
+  color: var(--white);
+  font-family: Lato;
 }
 
-[data-theme="dark"] .input {
+.input textarea {
+  height: 100px;
+}
+
+/* [data-theme="dark"] .input {
   width: 100%;
   padding: 8px;
   font-size: 16px;
@@ -35,8 +40,8 @@
   height: 40px;
   outline: none;
   background: var(--background);
-  color: var(--light);
-}
+  color: var(--dark);
+} */
 
 .inputError {
   width: 100%;

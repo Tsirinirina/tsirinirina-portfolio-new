@@ -58,7 +58,7 @@ export namespace Input {
               : undefined,
           }}
           render={({ field }) => (
-            <div className={`${styles.inputContainerError}`}>
+            <div className={`lato ${styles.inputContainerError}`}>
               <input
                 {...field}
                 type="text"
@@ -75,7 +75,65 @@ export namespace Input {
       </div>
     );
   };
+  export const TextArea: React.FC<InputProps> = ({
+    name,
+    placeholder,
+    required = true,
+    disabled = false,
+    defaultValue = "",
+    maxLength,
+    minLength,
+    ...rest
+  }) => {
+    const {
+      control,
+      formState: { errors },
+    } = useFormContext();
 
+    return (
+      <div className={styles.inputField}>
+        <Controller
+          name={name}
+          control={control}
+          defaultValue={defaultValue}
+          rules={{
+            required: required ? "Ce champ est obligatoire" : false,
+            maxLength: maxLength
+              ? {
+                  value: maxLength,
+                  message: `Maximum ${maxLength} characters allowed`,
+                }
+              : undefined,
+            minLength: minLength
+              ? {
+                  value: minLength,
+                  message: `Minimum ${minLength} characters required`,
+                }
+              : undefined,
+          }}
+          render={({ field }) => (
+            <div className={`lato ${styles.inputContainerError} `}>
+              <textarea
+                {...field}
+                placeholder={placeholder}
+                disabled={disabled}
+                className={errors[name] ? styles.inputError : styles.input}
+                value={field.value || ""}
+                style={{
+                  minHeight: "60px",
+                  maxHeight: "100px",
+                  // maxWidth: "500px",
+                  resize: "vertical",
+                }}
+                {...rest}
+              ></textarea>
+              <ErrorMessage error={errors[name] as any} />
+            </div>
+          )}
+        />
+      </div>
+    );
+  };
   export const Email: React.FC<InputProps> = ({
     name,
     placeholder,

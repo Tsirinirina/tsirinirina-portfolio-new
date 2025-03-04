@@ -5,7 +5,7 @@
   cursor: pointer;
   background: white;
   border: none;
-  background: var(--blue-dark);
+  background: var(--dark-hover);
   border-radius: 30px;
   overflow: hidden;
 }

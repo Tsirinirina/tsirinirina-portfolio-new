@@ -5,7 +5,7 @@ interface CitationProps {
 }
 
 const Citation: React.FC<CitationProps> = ({ children }) => {
-  return <div className={styles.container}>{children}</div>;
+  return <div className={`source-code ${styles.container}`}>{children}</div>;
 };
 
 export default Citation;

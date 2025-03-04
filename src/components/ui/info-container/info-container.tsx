@@ -6,6 +6,7 @@ import data from "./personal-info.json";
 import { Text } from "@/components/text/text";
 import Typewriter from "@/components/typewriter/typewriter";
 import ContactForm from "@/components/contact-form/contact-form";
+import { IoLocationSharp } from "react-icons/io5";
 
 interface InfoContainerProps {}
 
@@ -25,15 +26,18 @@ const InfoContainer: React.FC<InfoContainerProps> = () => {
           {`${data.firstname} ${data.lastname}`}
         </Typewriter>
         <Text.Subtitle fontSize="16px" fontFamily={"lato"} fontWeight="300">
-          N'hésitez pas à me contacter pour discuter de vos projets ou poser vos
-          questions. Je suis disponible par message, appel ou via mes réseaux
-          sociaux !
+          {data.invitation}
         </Text.Subtitle>
-        <Downloader
-          title="Télécharger mon CV"
-          link="https://drive.google.com/file/d/1LuTsaueZw9YPBuZQwSeN3ZjinBlmn9hU/view?usp=sharing"
-        />
+        <Downloader title="Voir mon CV" link={data.cvUrls[0]} />
         <SocialContainer socials={data.socials} />
+        <p className={styles.location}>
+          <IoLocationSharp />
+          {data.city}, {data.contry}
+        </p>
+        <Text.Subtitle fontSize="12px" fontFamily={"lato"} fontWeight="300">
+          © {new Date().getFullYear()} Tsirinirina | Créé avec passion et
+          professionnalisme.
+        </Text.Subtitle>
       </div>
       <div className={styles.contactForm}>
         <ContactForm />

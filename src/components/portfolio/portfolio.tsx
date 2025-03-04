@@ -17,6 +17,7 @@ import CertificatsContainer from "../ui/certificats-container/certificat-contain
 import ProjectsContainer from "../ui/projects-container/projects.container";
 import ExperienceContainer from "../ui/experience-container/experience-container";
 import InfoContainer from "../ui/info-container/info-container";
+import { FormProvider } from "react-hook-form";
 
 export default function Portfolio() {
   return (
@@ -48,6 +49,7 @@ export default function Portfolio() {
         <ExperienceContainer />
         <Espacer size="lg" />
       </main>
+
       <InfoContainer />
     </div>
   );

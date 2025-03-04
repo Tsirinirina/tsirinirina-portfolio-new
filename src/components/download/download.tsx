@@ -1,6 +1,6 @@
 import "./download.css";
 import { motion } from "framer-motion";
-import { SlCloudDownload } from "react-icons/sl";
+import { FaGoogleDrive } from "react-icons/fa";
 
 interface DownloaderProps {
   title: string;
@@ -26,7 +26,7 @@ const Downloader: React.FC<DownloaderProps> = ({ title, link }) => {
     >
       <div className="button-content">
         <div className="svg-container">
-          <SlCloudDownload className="download-icon" size={12} />
+          <FaGoogleDrive className="download-icon" size={12} color="#4285F4" />
         </div>
         <div className="text-container">
           <div className="text">{title}</div>

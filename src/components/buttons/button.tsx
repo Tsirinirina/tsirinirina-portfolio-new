@@ -1,6 +1,7 @@
 import { createStyleRegistry } from "styled-jsx";
 import styles from "./button.module.css";
-
+import { BiLoaderAlt } from "react-icons/bi";
+import { RxReload } from "react-icons/rx";
 export namespace Button {
   type ButtonProps = {
     onClick?: () => void;
@@ -19,9 +20,11 @@ export namespace Button {
       | "outline-tertiary"
       | "outline";
     [key: string]: any;
+    isLoading: boolean;
     width?: string;
     height?: string;
     disabled?: boolean;
+    className?: string;
   };
 
   const baseClass = (styleType: string) => {
@@ -58,20 +61,28 @@ export namespace Button {
   export const Submit: React.FC<ButtonProps> = ({
     children,
     styleType = "primary",
+    isLoading,
     width,
     height,
     disabled = false,
+    className,
     ...rest
   }) => {
     return (
       <button
         type="submit"
-        className={`${styles.button} ${styles.primary} ${baseClass(styleType)}`}
+        className={`${styles.button} ${styles.primary} ${baseClass(
+          styleType
+        )} ${className}`}
         style={{ width, height }}
-        disabled={disabled}
+        disabled={isLoading ?? disabled}
         {...rest}
       >
-        {children}
+        {isLoading ? (
+          <BiLoaderAlt size={18} className={styles.loading} />
+        ) : (
+          children
+        )}
       </button>
     );
   };
@@ -79,6 +90,7 @@ export namespace Button {
   export const Reset: React.FC<ButtonProps> = ({
     children,
     styleType = "secondary",
+    isLoading,
     width,
     height,
     disabled = false,
@@ -89,10 +101,14 @@ export namespace Button {
         type="reset"
         className={`${styles.button} ${baseClass(styleType)}`}
         style={{ width, height }}
-        disabled={disabled}
+        disabled={isLoading ?? disabled}
         {...rest}
       >
-        {children}
+        {isLoading ? (
+          <BiLoaderAlt size={18} className={styles.loading} />
+        ) : (
+          children
+        )}
       </button>
     );
   };
@@ -100,6 +116,7 @@ export namespace Button {
   export const DefaultButton: React.FC<ButtonProps> = ({
     children,
     styleType = "default",
+    isLoading,
     width,
     height,
     disabled = false,
@@ -113,7 +130,11 @@ export namespace Button {
         disabled={disabled}
         {...rest}
       >
-        {children}
+        {isLoading ? (
+          <BiLoaderAlt size={18} className={styles.loading} />
+        ) : (
+          children
+        )}
       </button>
     );
   };

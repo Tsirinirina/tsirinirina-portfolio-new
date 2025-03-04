@@ -12,7 +12,11 @@
   "jobTitle": "Développeur Full Stack Javascript & App développeur",
   "description": "\n<h2 class='title'>Un Développeur Web & Mobile</h2>\n\t<p class='description'>Passionné par la programmation. Amoureux des nouveaux technologies.</p>\n\t<p>J'aime les défis. Motivé et disponible./>\n\t<p>Je suis un développeur Web et Mobile Junior.</p>\n\t<p>Étudiant diplômé d'une licence professionnelle en Génie logiciel à l'<b>Institut d'Enseignement Supérieur d'Antsirabe Vakinankaratra</b>.</p>",
   "slogan": "‘’ Ma passion m'a conduit vers le métier de développeur, où je transforme des idées en solutions créatives et modernes. ‘’",
-  "invitation": "",
+  "invitation": "N'hésitez pas à me contacter pour discuter de vos projets ou poser vos questions. Je suis disponible par message, appel ou via mes réseaux sociaux !",
+  "cvUrls": [
+    "https://drive.google.com/file/d/1LuTsaueZw9YPBuZQwSeN3ZjinBlmn9hU/view?usp=sharing",
+    "https://drive.google.com/file/d/1pcJJmmoeAZ_PP-K36J5BCP_kenkv5Xyh/view?usp=drive_link"
+  ],
   "socials": [
     {
       "name": "Linkedin",
