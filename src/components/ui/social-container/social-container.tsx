@@ -1,4 +1,4 @@
-import { SocialType } from "@/services/personal-info/personal-info";
+import { SocialType } from "@/services/social/social";
 import Social from "../social/social";
 import styles from "./social-container.module.css";
 import { AnimatePresence, motion, useInView } from "framer-motion";

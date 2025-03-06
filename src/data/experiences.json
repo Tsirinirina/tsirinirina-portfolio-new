@@ -1,0 +1,166 @@
+{
+  "experiences": [
+    {
+      "company_name": "ITRAS Group",
+      "position": "Stagiaire Développeur Full-Stack",
+      "description": "Participation au développement d'applications web complètes, de la conception à la mise en production.",
+      "start_date": "2023-09-21",
+      "end_date": "2024-05-06",
+      "contract_type": "Stage",
+      "location": "Nanisana",
+      "missions": [
+        "Développement de fonctionnalités Frontend et Backend.",
+        "Intégration d'API REST avec NODEJS et NESTJS.",
+        "Optimisation des performances des applications web.",
+        "Mise en place de conteneurs DOCKER pour l'environnement de développement."
+      ],
+      "skills": [
+        "Développement Full-Stack.",
+        "Conception d'API REST.",
+        "Gestion de conteneurs avec DOCKER.",
+        "Optimisation et débogage d'applications."
+      ],
+      "achievements": [
+        "Développement et déploiement d'une application web en production.",
+        "Réduction du temps de réponse des API de 30%.",
+        "Amélioration de l'automatisation du déploiement avec DOCKER Compose."
+      ],
+      "technologies_used": [
+        "JAVASCRIPT",
+        "NODEJS",
+        "REACTJS",
+        "NEXTJS",
+        "NESTJS",
+        "DOCKER"
+      ],
+      "createdAt": "2025-02-25"
+    },
+    {
+      "company_name": "ITRAS Group",
+      "position": "Développeur Web Full-Stack (Junior)",
+      "description": "Responsable du développement et de la maintenance des applications web en environnement Full-Stack.",
+      "start_date": "2024-05-06",
+      "end_date": "",
+      "contract_type": "CDI",
+      "location": "Nanisana",
+      "missions": [
+        "Développement de nouvelles fonctionnalités et maintenance des plateformes existantes.",
+        "Optimisation des performances du backend sous NODEJS.",
+        "Intégration et gestion des conteneurs DOCKER pour les environnements de production.",
+        "Collaboration avec l'équipe pour concevoir des solutions évolutives et robustes."
+      ],
+      "skills": [
+        "Développement Full-Stack avancé.",
+        "Optimisation et gestion de bases de données.",
+        "Intégration et déploiement continu (CI/CD).",
+        "Gestion de projet Agile."
+      ],
+      "achievements": [
+        "Mise en œuvre de solutions scalables pour une augmentation de 40% de l'efficacité du système.",
+        "Optimisation des requêtes API, réduisant le temps de réponse de 25%.",
+        "Automatisation du processus de déploiement via DOCKER."
+      ],
+      "technologies_used": [
+        "JAVASCRIPT",
+        "NODEJS",
+        "REACTJS",
+        "NEXTJS",
+        "NESTJS",
+        "DOCKER",
+        "GIT",
+        "POSTGRESQL"
+      ],
+      "createdAt": "2025-02-12"
+    },
+    {
+      "company_name": "TechNova Solutions",
+      "position": "Développeur Backend",
+      "description": "Responsable du développement d'API backend robustes et évolutives pour des applications d'entreprise.",
+      "start_date": "2023-06-10",
+      "end_date": "2024-03-30",
+      "contract_type": "CDD",
+      "location": "Antananarivo",
+      "missions": [
+        "Développement et gestion d'API REST avec EXPRESSJS.",
+        "Conception et optimisation de bases de données SQL.",
+        "Gestion des performances du backend sous NODEJS.",
+        "Implémentation de solutions de mise à l'échelle pour les applications critiques."
+      ],
+      "skills": [
+        "Développement Backend avec NODEJS.",
+        "Conception de bases de données SQL.",
+        "Gestion des performances et optimisation backend.",
+        "Mise en œuvre de solutions de mise à l'échelle."
+      ],
+      "achievements": [
+        "Développement d'une API permettant de traiter 5000 requêtes par minute.",
+        "Optimisation des bases de données, réduisant le temps de requête de 40%.",
+        "Amélioration de la stabilité du système avec une mise à l'échelle horizontale."
+      ],
+      "technologies_used": [
+        "JAVASCRIPT",
+        "NODEJS",
+        "EXPRESSJS",
+        "MySQL",
+        "DOCKER"
+      ],
+      "createdAt": "2025-02-01"
+    },
+    {
+      "company_name": "SoftTech Innovators",
+      "position": "Développeur Mobile",
+      "description": "Développement d'applications mobiles cross-platform en utilisant Flutter pour des solutions client innovantes.",
+      "start_date": "2024-04-01",
+      "end_date": "",
+      "contract_type": "Freelance",
+      "location": "Antananarivo",
+      "missions": [
+        "Création d'applications mobiles performantes avec Flutter.",
+        "Intégration de fonctionnalités mobiles natives à l'aide de Dart et des plugins Flutter.",
+        "Collaboration avec les équipes UX/UI pour optimiser l'expérience utilisateur.",
+        "Tests et débogage des applications pour garantir leur performance."
+      ],
+      "skills": [
+        "Développement mobile avec Flutter et Dart.",
+        "Gestion de la performance des applications mobiles.",
+        "Optimisation de l'interface utilisateur mobile.",
+        "Tests et débogage d'applications."
+      ],
+      "achievements": [
+        "Création de 3 applications mobiles multiplateformes déployées avec succès sur iOS et Android.",
+        "Réduction de la taille des applications de 20% grâce à une optimisation des ressources.",
+        "Mise en place d'une solution CI/CD pour un déploiement rapide sur les stores."
+      ],
+      "technologies_used": ["Flutter", "Dart", "Android", "iOS", "Firebase"],
+      "createdAt": "2025-01-01"
+    },
+    {
+      "company_name": "XenoSoft Technologies",
+      "position": "Chef de Projet Technique",
+      "description": "Gestion et supervision des projets de développement de solutions logicielles en environnement Agile.",
+      "start_date": "2022-11-15",
+      "end_date": "2023-12-20",
+      "contract_type": "CDI",
+      "location": "Antananarivo",
+      "missions": [
+        "Gestion de l'ensemble du cycle de vie des projets de développement logiciel.",
+        "Coordination avec les équipes de développement et les parties prenantes pour garantir la livraison dans les délais.",
+        "Évaluation des risques et gestion des priorités.",
+        "Assurer la qualité et la conformité des livrables à travers des tests automatisés."
+      ],
+      "skills": [
+        "Gestion de projets Agile (Scrum).",
+        "Leadership et gestion d'équipe.",
+        "Évaluation des risques et gestion des priorités.",
+        "Tests logiciels et assurance qualité."
+      ],
+      "achievements": [
+        "Livraison réussie de 5 projets logiciels dans les délais impartis.",
+        "Mise en place de processus d'amélioration continue pour optimiser les cycles de développement.",
+        "Réduction des risques de projet de 30% grâce à une meilleure gestion des priorités."
+      ],
+      "technologies_used": ["Jira", "GIT", "DOCKER", "CI/CD"],
+      "createdAt": "2024-12-25"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import style from "./typewriter.module.css";
 import clsx from "clsx";
 
 type TypewriterProps = {
-  children: string;
+  children: any;
   typingSpeed?: number;
   className?: any;
   cursor?: boolean;

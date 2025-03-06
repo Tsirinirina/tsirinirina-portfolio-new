@@ -1,4 +1,4 @@
-export interface PersonalInfo {
+export interface Personal {
   firstname: string;
   lastname: string;
   emails: string;
@@ -12,11 +12,15 @@ export interface PersonalInfo {
   jobTitle: string;
   description: string;
   slogan: string;
-  socials: SocialType[];
+  invitation: string;
 }
 
-export interface SocialType {
-  name: string;
-  url: string;
-  username?: string;
+export interface PersonalDTO {
+  phones?: string[];
+  address?: string;
+  city?: string;
+  jobTitle?: string;
+  description?: string;
+  slogan?: string;
+  invitation?: string;
 }
