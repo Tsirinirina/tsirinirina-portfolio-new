@@ -1,6 +1,7 @@
 import { Project, ProjectDTO } from "@/services/project/project";
 import { Entity, readFile, writeFile } from "@/utils/json.utils";
 import { NextRequest, NextResponse } from "next/server";
+import { v4 as uuid } from "uuid";
 
 export const GET = async () => {
   const projectData: Project[] = readFile(Entity.Projects);
@@ -18,8 +19,8 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({ message: "Les données ne doit pas être vide" });
   }
   const projectData: Project[] = readFile(Entity.Projects);
-  const updateData = { ...body, createdAt: dateNow };
-  let newData = [...projectData, updateData];
+  const updateDTO = { id: uuid(), ...body, createdAt: dateNow };
+  let newData = [...projectData, updateDTO];
   const updatedData = writeFile(Entity.Projects, newData);
-  return NextResponse.json(updatedData);
+  return NextResponse.json(updatedData, { status: 201 });
 };

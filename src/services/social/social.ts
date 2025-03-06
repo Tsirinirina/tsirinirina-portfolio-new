@@ -1,4 +1,5 @@
 export interface SocialType {
+  id: string;
   name: string;
   url: string;
   username?: string;

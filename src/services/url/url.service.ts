@@ -1,9 +1,9 @@
 import apiClient from "@/utils/api.clients";
-import { SocialType, SocialTypeDTO } from "./social";
+import { UrlType, UrlTypeDTO } from "./url";
 
-export const GetAllSocial = async (): Promise<SocialType | any> => {
+export const GetAllUrl = async (): Promise<UrlType | any> => {
   try {
-    const data = await apiClient.get("/social");
+    const data = await apiClient.get("/url");
     return data;
   } catch (error: any) {
     console.error(
@@ -14,9 +14,9 @@ export const GetAllSocial = async (): Promise<SocialType | any> => {
   }
 };
 
-export const GetSocialById = async (id: string): Promise<SocialType | any> => {
+export const GetUrlById = async (id: string): Promise<UrlType | any> => {
   try {
-    const data = await apiClient.get(`/social/${id}`);
+    const data = await apiClient.get(`/url/${id}`);
     return data;
   } catch (error: any) {
     console.error(
@@ -27,9 +27,9 @@ export const GetSocialById = async (id: string): Promise<SocialType | any> => {
   }
 };
 
-export const CreatSocial = async (newData: SocialTypeDTO) => {
+export const CreatUrl = async (newData: UrlTypeDTO) => {
   try {
-    const data = await apiClient.post("/social", newData);
+    const data = await apiClient.post("/url", newData);
     return data;
   } catch (error: any) {
     console.error(
@@ -40,12 +40,9 @@ export const CreatSocial = async (newData: SocialTypeDTO) => {
   }
 };
 
-export const UpdateSocialData = async (
-  id: string,
-  updatedData: SocialTypeDTO
-) => {
+export const UpdateUrlData = async (id: string, updatedData: UrlTypeDTO) => {
   try {
-    const data = await apiClient.patch(`/social/${id}`, updatedData);
+    const data = await apiClient.patch(`/url/${id}`, updatedData);
     return data;
   } catch (error: any) {
     console.error(
@@ -56,9 +53,9 @@ export const UpdateSocialData = async (
   }
 };
 
-export const DeleteSocialData = async (id: string) => {
+export const DeleteUrlData = async (id: string) => {
   try {
-    const data = await apiClient.delete(`/social/${id}`);
+    const data = await apiClient.delete(`/url/${id}`);
     return data;
   } catch (error: any) {
     console.error(

@@ -1,9 +1,9 @@
 import apiClient from "@/utils/api.clients";
-import { SocialType, SocialTypeDTO } from "./social";
+import { Certificate, CertificateDTO } from "./certificat";
 
-export const GetAllSocial = async (): Promise<SocialType | any> => {
+export const GetAllCertificate = async (): Promise<Certificate | any> => {
   try {
-    const data = await apiClient.get("/social");
+    const data = await apiClient.get("/certificate");
     return data;
   } catch (error: any) {
     console.error(
@@ -14,9 +14,11 @@ export const GetAllSocial = async (): Promise<SocialType | any> => {
   }
 };
 
-export const GetSocialById = async (id: string): Promise<SocialType | any> => {
+export const GetCertificateById = async (
+  id: string
+): Promise<Certificate | any> => {
   try {
-    const data = await apiClient.get(`/social/${id}`);
+    const data = await apiClient.get(`/certificate/${id}`);
     return data;
   } catch (error: any) {
     console.error(
@@ -27,9 +29,9 @@ export const GetSocialById = async (id: string): Promise<SocialType | any> => {
   }
 };
 
-export const CreatSocial = async (newData: SocialTypeDTO) => {
+export const CreatCertificate = async (newData: CertificateDTO) => {
   try {
-    const data = await apiClient.post("/social", newData);
+    const data = await apiClient.post("/certificate", newData);
     return data;
   } catch (error: any) {
     console.error(
@@ -40,12 +42,12 @@ export const CreatSocial = async (newData: SocialTypeDTO) => {
   }
 };
 
-export const UpdateSocialData = async (
+export const UpdateCertificateData = async (
   id: string,
-  updatedData: SocialTypeDTO
+  updatedData: CertificateDTO
 ) => {
   try {
-    const data = await apiClient.patch(`/social/${id}`, updatedData);
+    const data = await apiClient.patch(`/certificate/${id}`, updatedData);
     return data;
   } catch (error: any) {
     console.error(
@@ -56,9 +58,9 @@ export const UpdateSocialData = async (
   }
 };
 
-export const DeleteSocialData = async (id: string) => {
+export const DeleteCertificateData = async (id: string) => {
   try {
-    const data = await apiClient.delete(`/social/${id}`);
+    const data = await apiClient.delete(`/certificate/${id}`);
     return data;
   } catch (error: any) {
     console.error(

@@ -1,18 +1,13 @@
 [
   {
     "id": "a43bc79e-3a73-4d1b-bd73-d7df71ae8b57",
-    "title": "Titre",
-    "shortTitle": "NOW",
+    "title": "Titre modifié",
+    "shortTitle": "NOW modifié",
     "description": "Description",
     "startDate": "2025-02-01",
     "publishDate": "2026-01-01",
-    "technoList": [
-      "REACT_NATIVE"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA"
-    ],
+    "technoList": ["REACT_NATIVE"],
+    "technoElements": ["DOCKER", "FIGMA"],
     "logoUri": "",
     "clientInformation": "Projet personnel",
     "link": "http://lien-vers-la-page-a-copier.com",
@@ -23,22 +18,32 @@
     "createdAt": "2025-03-06"
   },
   {
+    "id": "469451a0-3aa2-4b19-9e57-2736f082f7ae",
+    "title": "Titre",
+    "shortTitle": "NOW",
+    "description": "Description",
+    "startDate": "2025-02-01",
+    "publishDate": "2026-01-01",
+    "technoList": ["REACT_NATIVE"],
+    "technoElements": ["DOCKER", "FIGMA"],
+    "logoUri": "",
+    "clientInformation": "Projet personnel",
+    "link": "http://lien-vers-la-page-a-copier.com",
+    "version": "1.00",
+    "status": "DEV",
+    "type": "Mobile Dev",
+    "priority": "NORMAL",
+    "createdAt": "2025-02-05"
+  },
+  {
     "id": "a470f4f2-d057-49d1-b80a-076e067c03be",
     "title": "Titre du projet long avec plusieurs mots",
     "shortTitle": "NOUVELLE",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, sapiente praesentium? Eius sed nisi, maxime similique labore iste voluptatem deleniti eveniet illo natus aperiam placeat corporis. Incidunt voluptates cum minima est, corporis sapiente deserunt aliquam illum, nesciunt dolorem quo nemo, omnis quos numquam! Exercitationem nesciunt quo illo ducimus laudantium necessitatibus!",
     "startDate": "2024-11-11",
     "publishDate": "2024-12-20",
-    "technoList": [
-      "WORDPRESS",
-      "NEXT"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA",
-      "ELEMENTOR",
-      "YOOTHEME"
-    ],
+    "technoList": ["WORDPRESS", "NEXT"],
+    "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
     "logoUri": "",
     "clientInformation": "Entreprise",
     "link": "http://lien-vers-la-page-a-copier.com",
@@ -55,15 +60,8 @@
     "description": "Refont du site web de ID Com",
     "startDate": "2024-11-11",
     "publishDate": "2024-12-20",
-    "technoList": [
-      "WORDPRESS"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA",
-      "ELEMENTOR",
-      "YOOTHEME"
-    ],
+    "technoList": ["WORDPRESS"],
+    "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
     "logoUri": "",
     "clientInformation": "ITRAS, Manae Business",
     "link": "http://lien-vers-la-page-a-copier.com",
@@ -79,17 +77,9 @@
     "shortTitle": "HIER",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore itaque possimus modi neque consectetur unde repudiandae, temporibus laudantium corrupti qui harum sapiente, dolorem iste deserunt quod nesciunt debitis nulla aut?",
     "startDate": "2024-11-11",
-    "publishDate": "2024-12-20",
-    "technoList": [
-      "WORDPRESS",
-      "NEXT"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA",
-      "ELEMENTOR",
-      "YOOTHEME"
-    ],
+    "publishDate": "2024-10-30",
+    "technoList": ["WORDPRESS", "NEXT"],
+    "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
     "logoUri": "",
     "clientInformation": "Entreprise",
     "link": "http://lien-vers-la-page-a-copier.com",
@@ -105,17 +95,9 @@
     "shortTitle": "MOIS DERNIER",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore itaque possimus modi neque consectetur unde repudiandae, temporibus laudantium corrupti qui harum sapiente, dolorem iste deserunt quod nesciunt debitis nulla aut?",
     "startDate": "2024-11-11",
-    "publishDate": "2024-12-20",
-    "technoList": [
-      "WORDPRESS",
-      "NEXT"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA",
-      "ELEMENTOR",
-      "YOOTHEME"
-    ],
+    "publishDate": "2024-12-02",
+    "technoList": ["WORDPRESS", "NEXT"],
+    "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
     "logoUri": "",
     "clientInformation": "Entreprise",
     "link": "http://lien-vers-la-page-a-copier.com",
@@ -132,16 +114,8 @@
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore itaque possimus modi neque consectetur unde repudiandae, temporibus laudantium corrupti qui harum sapiente, dolorem iste deserunt quod nesciunt debitis nulla aut?",
     "startDate": "2024-11-11",
     "publishDate": "2024-12-20",
-    "technoList": [
-      "WORDPRESS",
-      "NEXT"
-    ],
-    "technoElements": [
-      "DOCKER",
-      "FIGMA",
-      "ELEMENTOR",
-      "YOOTHEME"
-    ],
+    "technoList": ["WORDPRESS", "NEXT"],
+    "technoElements": ["DOCKER", "FIGMA", "ELEMENTOR", "YOOTHEME"],
     "logoUri": "",
     "clientInformation": "Entreprise",
     "link": "http://lien-vers-la-page-a-copier.com",

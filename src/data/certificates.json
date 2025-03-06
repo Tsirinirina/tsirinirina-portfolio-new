@@ -1,0 +1,35 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "name": "Master en Génie Logiciel",
+    "institute": "CNTMAD ",
+    "description": "",
+    "type": "DIPLOMA",
+    "startDate": "2024-11-01",
+    "endDate": "",
+    "fullDate": false,
+    "createdAt": "2025-01-01T08:23:10Z"
+  },
+  {
+    "id": "6b29fc40-65b2-41d3-9a0e-446655440001",
+    "name": "Licence professionnelle en Génie Logiciel",
+    "institute": "IES-AV (Institut d’Enseignement Supérieur d’Antsirabe Vakinankaratra)",
+    "description": "",
+    "type": "DIPLOMA",
+    "startDate": "2023-09-01",
+    "endDate": "2024-06-01",
+    "fullDate": true,
+    "createdAt": "2024-06-01T12:34:20Z"
+  },
+  {
+    "id": "d52f05dd-bb2e-4474-9295-288d5c8204d9",
+    "name": "Diplômé du Baccalauréat Série D",
+    "institute": "LMA (Lycée Moderne Ampefiloha)",
+    "description": "",
+    "type": "CERTIFICATION",
+    "startDate": "2018-01-01",
+    "endDate": "2018-01-01",
+    "fullDate": true,
+    "createdAt": "2018-03-06T13:39:08.490Z"
+  }
+]

@@ -3,7 +3,7 @@ import path from "path";
 
 export enum Entity {
   "Pesonal",
-  "Certificats",
+  "Certificate",
   "Experiences",
   "Projects",
   "Skills",
@@ -15,8 +15,8 @@ const fileName = (entity: Entity) => {
   switch (entity) {
     case Entity.Pesonal:
       return "personal.json";
-    case Entity.Certificats:
-      return "certificats.json";
+    case Entity.Certificate:
+      return "certificates.json";
     case Entity.Experiences:
       return "experiences.json";
     case Entity.Projects:

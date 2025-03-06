@@ -45,5 +45,4 @@ export interface ProjectDTO {
   status?: string;
   type?: ProjectType;
   priority?: Priority;
-  createdAt?: string;
 }
