@@ -1,3 +1,4 @@
+import apiClient from "@/utils/api.clients";
 import { Personal, PersonalDTO } from "./personal";
 
 export const GetPersonalData = async (): Promise<Personal | any> => {
@@ -5,26 +6,27 @@ export const GetPersonalData = async (): Promise<Personal | any> => {
     const res = await fetch(`/api/personal`, {
       cache: "no-store",
     });
-    if (!res.ok) throw new Error(`Erreur API : ${res.statusText}`);
-    const data = await res.json();
+
+    const { data } = await apiClient.get("/personal");
     return data;
-  } catch (error) {
-    console.error("Erreur lors de la récupération des données :", error);
+  } catch (error: any) {
+    console.error(
+      "Erreur lors de la récupération des données :",
+      error?.response?.data || error
+    );
     return { title: "Erreur de chargement" };
   }
 };
 
 export const UpdatePersonalData = async (updatedData: PersonalDTO) => {
   try {
-    const res = await fetch(`/api/personal`, {
-      method: "PATCH",
-      cache: "no-store",
-    });
-    if (!res.ok) throw new Error(`Erreur API : ${res.statusText}`);
-    const data = await res.json();
+    const { data } = await apiClient.patch("/personal", updatedData);
     return data;
-  } catch (error) {
-    console.error("Erreur lors de la récupération des données :", error);
+  } catch (error: any) {
+    console.error(
+      "Erreur lors de la mise à jour des données :",
+      error?.response?.data || error
+    );
     return { title: "Erreur de chargement" };
   }
 };
