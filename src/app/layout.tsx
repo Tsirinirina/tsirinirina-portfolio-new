@@ -8,6 +8,7 @@ import "../styles/flexbox.css";
 import "../styles/shadow.css";
 import "../styles/fonts.css";
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Tsirinirina Patrick RAJAONARISON| Porfolio",
@@ -41,6 +42,7 @@ export default function RootLayout({
       </head>
       <body className={``}>
         <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
