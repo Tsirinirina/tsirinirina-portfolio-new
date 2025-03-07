@@ -52,13 +52,15 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   }, []);
 
   useEffect(() => {
-    if (isVisible && currentIndex < children.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + children[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, typingSpeed);
+    if (isVisible && children) {
+      if (currentIndex < children.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedText((prev) => prev + children[currentIndex]);
+          setCurrentIndex((prev) => prev + 1);
+        }, typingSpeed);
 
-      return () => clearTimeout(timeout);
+        return () => clearTimeout(timeout);
+      }
     }
   }, [isVisible, currentIndex, children, typingSpeed]);
 
