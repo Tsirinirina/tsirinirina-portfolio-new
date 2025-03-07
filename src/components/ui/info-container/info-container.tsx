@@ -29,7 +29,7 @@ const InfoContainer: React.FC<InfoContainerProps> = () => {
           {data.invitation}
         </Text.Subtitle>
         <Downloader title="Voir mon CV" link={data.cvUrls[0]} />
-        <SocialContainer socials={data.socials} />
+        <SocialContainer socials={[]} />
         <p className={styles.location}>
           <IoLocationSharp />
           {data.city}, {data.contry}

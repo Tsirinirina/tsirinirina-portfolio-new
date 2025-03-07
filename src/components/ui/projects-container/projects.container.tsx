@@ -18,7 +18,7 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
     { id: 0, type: "Tous", isActive: true },
   ]);
 
-  const [projects, setProjects] = useState<ProjectModel[]>(data.projects);
+  const [projects, setProjects] = useState<ProjectModel[]>([]);
 
   const enableLink = (id: number) => {
     setLoading(true);
@@ -29,35 +29,35 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
   };
 
   useEffect(() => {
-    if (data.projects) {
+    if (data) {
       setLoading(false);
     }
-    if (data.types) {
-      setTypes([
-        { id: 0, type: "Tous", isActive: true },
-        ...data.types.map((item, i) => ({
-          id: i + 1,
-          type: item,
-          isActive: false,
-        })),
-      ]);
-    }
+    // if (data.types) {
+    //   setTypes([
+    //     { id: 0, type: "Tous", isActive: true },
+    //     ...data.types.map((item, i) => ({
+    //       id: i + 1,
+    //       type: item,
+    //       isActive: false,
+    //     })),
+    //   ]);
+    // }
   }, []);
 
   const filterProject = (item: string) => {
-    if (projects) {
-      setLoading(false);
-      if (item === "Tous") {
-        setProjects(data.projects);
-      } else {
-        const projectFiltered = data.projects.filter(
-          (project) =>
-            project.type.toString().toLowerCase() ===
-            item.toString().toLowerCase()
-        );
-        setProjects(projectFiltered);
-      }
-    }
+    // if (projects) {
+    //   setLoading(false);
+    //   if (item === "Tous") {
+    //     setProjects(data.projects);
+    //   } else {
+    //     const projectFiltered = data.projects.filter(
+    //       (project) =>
+    //         project.type.toString().toLowerCase() ===
+    //         item.toString().toLowerCase()
+    //     );
+    //     setProjects(projectFiltered);
+    //   }
+    // }
   };
 
   return (
@@ -104,7 +104,8 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
                 clientInformation={item.clientInformation}
                 publishDate={item.publishDate}
                 startDate={item.startDate}
-                size={item.priority === "high" ? "LG" : "MD"}
+                // size={item.priority === "high" ? "LG" : "MD"}
+                size={"MD"}
                 projectLink={item.link}
                 projectVersion={item.version}
                 status={item.status}

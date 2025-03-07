@@ -31,5 +31,16 @@
     "endDate": "2018-01-01",
     "fullDate": true,
     "createdAt": "2018-03-06T13:39:08.490Z"
+  },
+  {
+    "id": "b8f4e289-27d1-4f51-a3a8-3a098cc0bfdd",
+    "name": "test",
+    "institute": "et (et setse et)",
+    "description": "",
+    "type": "CERTIFICATION",
+    "startDate": "2018-01-01",
+    "endDate": "2019-01-01",
+    "fullDate": true,
+    "createdAt": "2025-03-07T05:54:38.032Z"
   }
 ]
