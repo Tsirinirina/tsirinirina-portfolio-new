@@ -1,151 +1,186 @@
-{
-  "technicalSkills": {
-    "programmingLanguages": [
-      {
-        "language": "JavaScript",
-        "percentage": "80%",
-        "ranking": "Avancée"
-      },
-      {
-        "language": "Python",
-        "percentage": "50%",
-        "ranking": "Intermédiaire"
-      },
-      {
-        "language": "Java",
-        "percentage": "40%",
-        "ranking": "Intermédiaire"
-      },
-      {
-        "language": "C++",
-        "percentage": "0%",
-        "ranking": "Débutant"
-      }
-    ],
-    "webDevelopment": {
-      "frontEnd": [
-        {
-          "technology": "HTML",
-          "percentage": "90%",
-          "ranking": "Expert"
-        },
-        {
-          "technology": "CSS",
-          "percentage": "85%",
-          "ranking": "Avancée"
-        },
-        {
-          "technology": "ReactJs",
-          "percentage": "70%",
-          "ranking": "Intermédiaire"
-        },
-        {
-          "technology": "NextJs",
-          "percentage": "80%",
-          "ranking": "Avancée"
-        },
-        {
-          "technology": "AngularJS",
-          "percentage": "23%",
-          "ranking": "Intermédiaire"
-        }
-      ],
-      "backEnd": [
-        {
-          "technology": "Node.js",
-          "percentage": "65%",
-          "ranking": "Intermédiaire"
-        },
-
-        {
-          "technology": "NestJs",
-          "percentage": "65%",
-          "ranking": "Intermédiaire"
-        },
-        {
-          "technology": "Node.js",
-          "percentage": "65%",
-          "ranking": "Intermédiaire"
-        },
-        {
-          "technology": "Laravel",
-          "percentage": "45%",
-          "ranking": "Intermédiaire"
-        },
-        {
-          "technology": "Symfony 5,6",
-          "percentage": "45%",
-          "ranking": "Intermédiaire"
-        }
-      ]
-    },
-    "databaseManagement": [
-      {
-        "technology": "MySQL",
-        "percentage": "80%",
-        "ranking": "Avancée"
-      },
-      {
-        "technology": "MongoDB",
-        "percentage": "70%",
-        "ranking": "Intermédiaire"
-      },
-      {
-        "technology": "PostGres",
-        "percentage": "30%",
-        "ranking": "Débutant"
-      }
-    ],
-    "versionControl": [
-      {
-        "technology": "Git",
-        "percentage": "85%",
-        "ranking": "Avancée"
-      },
-      {
-        "technology": "GitHub",
-        "percentage": "85%",
-        "ranking": "Avancée"
-      }
-    ],
-    "cloudComputing": [
-      {
-        "technology": "AWS",
-        "percentage": "0%",
-        "ranking": "Débutant"
-      },
-      {
-        "technology": "Azure",
-        "percentage": "0%",
-        "ranking": "Débutant"
-      }
-    ]
+[
+  {
+    "id": "548652b4-949b-4689-ab01-fa11cd5fe4c5",
+    "category": "FRONT_END",
+    "name": "ReactJs",
+    "percentage": 70,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
   },
-  "languageSkills": [
-    {
-      "name": "Malagasy",
-      "ranking": "Langue maternelle",
-      "percentage": "80%",
-      "flagName": "MDG"
-    },
-    {
-      "name": "French",
-      "ranking": "Professionnel, Conversationnel",
-      "percentage": "65%",
-      "flagName": "FR"
-    },
-    {
-      "name": "English",
-      "ranking": "Professionnel, Débutant",
-      "percentage": "40%",
-      "flagName": "USA"
-    }
-  ],
-  "softSkills": [
-    "Team collaboration",
-    "Problem-solving",
-    "Communication",
-    "Time management",
-    "Adaptability"
-  ]
-}
+  {
+    "id": "c65bdc1a-c860-4111-aee0-b80df1036a7a",
+    "category": "FRONT_END",
+    "name": "NextJs",
+    "percentage": 80,
+    "ranking": "Avancée",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "71bb5ba4-04cf-413e-8d49-f22b26f0edf1",
+    "category": "FRONT_END",
+    "name": "AngularJS",
+    "percentage": 23,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "1484c8a9-9593-4999-857d-d60074ed8166",
+    "category": "BACK_END",
+    "name": "Node.js",
+    "percentage": 65,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "4c390c35-186c-4020-9e90-9489fdd49d01",
+    "category": "BACK_END",
+    "name": "NestJs",
+    "percentage": 65,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "86003066-3604-4f15-b524-5e5c01e65e5f",
+    "category": "BACK_END",
+    "name": "Laravel",
+    "percentage": 45,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "7c0010e7-7e3b-4f98-8a8f-4f2bbb8902f0",
+    "category": "BACK_END",
+    "name": "Symfony 5,6",
+    "percentage": 45,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "527fd7db-7b96-4d8b-9ebc-5b3b7d4e3370",
+    "category": "DATABASE",
+    "name": "MySQL",
+    "percentage": 80,
+    "ranking": "Avancée",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "f466bd1f-aa78-4c54-a15d-2f12442589b4",
+    "category": "DATABASE",
+    "name": "MongoDB",
+    "percentage": 70,
+    "ranking": "Intermédiaire",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "f954e268-878f-4304-aa91-09371782e907",
+    "category": "DATABASE",
+    "name": "PostGres",
+    "percentage": 30,
+    "ranking": "Débutant",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "ac61f45f-d435-42e4-adda-525d2ea9be83",
+    "category": "VERSION_CONTROL",
+    "name": "Git",
+    "percentage": 85,
+    "ranking": "Avancée",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "3936edcf-2658-48bc-9f39-a21752c40772",
+    "category": "VERSION_CONTROL",
+    "name": "GitHub",
+    "percentage": 85,
+    "ranking": "Avancée",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "1442f55d-3d92-424a-9a4d-88c4632c7b38",
+    "category": "CLOUD",
+    "name": "AWS",
+    "percentage": 0,
+    "ranking": "Débutant",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "aba37bec-ffe4-4060-a58d-9a9f388f551b",
+    "category": "CLOUD",
+    "name": "Azure",
+    "percentage": 0,
+    "ranking": "Débutant",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "1cd0436d-bae6-41bf-8e72-f9969d05ee1f",
+    "category": "Language",
+    "name": "Malagasy",
+    "percentage": 80,
+    "ranking": "Langue maternelle",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "7e2ebe56-7cc4-4380-9083-7bc6fafe3b0c",
+    "category": "Language",
+    "name": "French",
+    "percentage": 65,
+    "ranking": "Professionnel, Conversationnel",
+    "createdAt": "2025-02-12T08:23:10Z"
+  },
+  {
+    "id": "13c9578d-8ae8-47f8-b501-568047ffe816",
+    "category": "PROGRAMMING_LANGUAGE",
+    "name": "C++",
+    "percentage": 0,
+    "ranking": "Débutant",
+    "createdAt": "2025-01-12T08:23:10Z"
+  },
+  {
+    "id": "c610a81d-29e2-4693-9561-ff4c7b809ada",
+    "category": "FRONT_END",
+    "name": "HTML",
+    "percentage": 90,
+    "ranking": "Expert",
+    "createdAt": "2025-01-10T08:23:10Z"
+  },
+  {
+    "id": "d60643c3-1c36-4fe5-a533-c7264d8b11a9",
+    "category": "FRONT_END",
+    "name": "CSS",
+    "percentage": 85,
+    "ranking": "Avancée",
+    "createdAt": "2024-10-12T08:23:10Z"
+  },
+  {
+    "id": "9b1573aa-70e2-4b56-9101-dcda4e9eae87",
+    "category": "PROGRAMMING_LANGUAGE",
+    "name": "JavaScript",
+    "percentage": 80,
+    "ranking": "Avancée",
+    "createdAt": "2024-02-12T08:23:10Z"
+  },
+  {
+    "id": "3334fe75-da4e-4009-928e-83a46c79c848",
+    "category": "PROGRAMMING_LANGUAGE",
+    "name": "Java",
+    "percentage": 40,
+    "ranking": "Intermédiaire",
+    "createdAt": "2023-02-12T08:23:10Z"
+  },
+  {
+    "id": "b2fd1e28-703f-4f59-a16a-c54473aae41c",
+    "category": "PROGRAMMING_LANGUAGE",
+    "name": "Python",
+    "percentage": 50,
+    "ranking": "Intermédiaire",
+    "createdAt": "2020-05-12T08:23:10Z"
+  },
+  {
+    "id": "170f82dd-9df1-4f24-ae6c-05d98c796eec",
+    "category": "Language",
+    "name": "English",
+    "percentage": 40,
+    "ranking": "Professionnel, Débutant",
+    "createdAt": "2020-05-12T08:23:10Z"
+  }
+]
