@@ -1,9 +1,9 @@
 import apiClient from "@/utils/api.clients";
-import { Certificate, CertificateDTO } from "./certificat";
+import { Speciality, SpecialityDTO } from "./speciality";
 
-export const GetAllCertificate = async (): Promise<Certificate[] | any> => {
+export const GetAllSpeciality = async (): Promise<Speciality | any> => {
   try {
-    const { data } = await apiClient.get("/certificate");
+    const { data } = await apiClient.get("/speciality");
     return data;
   } catch (error: any) {
     console.error(
@@ -14,11 +14,11 @@ export const GetAllCertificate = async (): Promise<Certificate[] | any> => {
   }
 };
 
-export const GetCertificateById = async (
+export const GetSpecialityById = async (
   id: string
-): Promise<Certificate | any> => {
+): Promise<Speciality | any> => {
   try {
-    const data = await apiClient.get(`/certificate/${id}`);
+    const data = await apiClient.get(`/speciality/${id}`);
     return data;
   } catch (error: any) {
     console.error(
@@ -29,9 +29,9 @@ export const GetCertificateById = async (
   }
 };
 
-export const CreatCertificate = async (newData: CertificateDTO) => {
+export const CreatSpeciality = async (newData: SpecialityDTO) => {
   try {
-    const data = await apiClient.post("/certificate", newData);
+    const data = await apiClient.post("/speciality", newData);
     return data;
   } catch (error: any) {
     console.error(
@@ -42,12 +42,12 @@ export const CreatCertificate = async (newData: CertificateDTO) => {
   }
 };
 
-export const UpdateCertificateData = async (
+export const UpdateSpecialityData = async (
   id: string,
-  updatedData: CertificateDTO
+  updatedData: SpecialityDTO
 ) => {
   try {
-    const data = await apiClient.patch(`/certificate/${id}`, updatedData);
+    const data = await apiClient.patch(`/speciality/${id}`, updatedData);
     return data;
   } catch (error: any) {
     console.error(
@@ -58,9 +58,9 @@ export const UpdateCertificateData = async (
   }
 };
 
-export const DeleteCertificateData = async (id: string) => {
+export const DeleteSpecialityData = async (id: string) => {
   try {
-    const data = await apiClient.delete(`/certificate/${id}`);
+    const data = await apiClient.delete(`/speciality/${id}`);
     return data;
   } catch (error: any) {
     console.error(

@@ -5,21 +5,11 @@ import { useEffect, useState } from "react";
 import { Personal } from "@/services/personal/personal";
 import { GetPersonalData } from "@/services/personal/personal.service";
 
-const JobTitle = () => {
-  const [personalData, setPersonalData] = useState<Personal>();
-  const getPersonalData = async () => {
-    try {
-      const data = (await GetPersonalData()) as Personal;
-      setPersonalData(data);
-    } catch (error) {
-      console.error("Erreur lors de la récupération des données :", error);
-      return { title: "Erreur de chargement" };
-    }
-  };
-  useEffect(() => {
-    getPersonalData();
-  }, []);
+interface JobTitleProps {
+  title: string;
+}
 
+const JobTitle: React.FC<JobTitleProps> = ({ title }) => {
   return (
     <Typewriter
       typingSpeed={80}
@@ -28,7 +18,7 @@ const JobTitle = () => {
       fontSize="28px"
       fontWeight="400"
     >
-      {personalData?.jobTitle}
+      {title}
     </Typewriter>
   );
 };

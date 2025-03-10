@@ -1,11 +1,13 @@
 import { Text } from "@/components/text/text";
-import React, { useState, useEffect } from "react";
 import styles from "./banner-name.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import data from "./personal-info.json";
 import UseWindowSize from "@/hooks/window.size";
 
-const BannerName = () => {
+interface BannerNameProps {
+  name: string;
+}
+
+const BannerName: React.FC<BannerNameProps> = ({ name }) => {
   const windowsWidthSize = UseWindowSize().width;
   return (
     <AnimatePresence>
@@ -36,7 +38,7 @@ const BannerName = () => {
           }
           className={`gabarito ${styles.name}`}
         >
-          {data.firstname.toUpperCase()}.
+          {name && name.toUpperCase()}.
         </Text.Title>
       </motion.div>
     </AnimatePresence>

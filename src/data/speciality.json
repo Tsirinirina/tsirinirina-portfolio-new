@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Frontend Dev",
+    "description": "Avec plus de 2 ans d'expérience en développement web, je me passionne pour l'UI/UX en utilisant HTML, CSS, JavaScript et les frameworks React et Next.js."
+  },
+  {
+    "name": "Backend Dev",
+    "description": "Expérience étendue en programmation fonctionnelle et orientée objet, avec une maîtrise des langages JavaScript/ES6, TypeScript et PHP, ainsi qu'en Node.js et les frameworks NestJS, Symfony 5/6 pour le développement d'applications sécurisées et performantes."
+  }
+]

@@ -49,6 +49,15 @@
   height: 20vh;
 }
 
+.loadingContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 768px) {
   .main {
     padding: 20px 10px;

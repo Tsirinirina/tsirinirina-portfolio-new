@@ -9,10 +9,13 @@ import Typewriter from "@/components/typewriter/typewriter";
 import TypewriterCode from "@/components/typewriter/typewriter-code";
 import LogoTechno from "@/components/logo-techno/logo-techno";
 import { TechnoList } from "@/utils/techno.list";
+import { Speciality } from "@/services/speciality/speciality";
 
-interface SkillsContainerProps {}
+interface SkillsContainerProps {
+  data: Speciality[];
+}
 
-const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
+const SkillsContainer: React.FC<SkillsContainerProps> = ({ data }) => {
   const frontendRef = useRef(null);
   const backendRef = useRef(null);
 
@@ -24,6 +27,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
     once: true,
     margin: "-50px",
   });
+  console.log("data==", data);
 
   return (
     <div className={styles.container} id="myskills">
@@ -44,7 +48,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
             <div className={styles.icon}>
               <LogoTechno techno={TechnoList.REACTJS} size={62} />
             </div>
-            <div className={`${styles.label} lexend-deca`}>Frontend Dev</div>
+            <div className={`${styles.label} lexend-deca`}>{data[0].name}</div>
           </div>
           <motion.div
             className={`${styles.body} lato`}
@@ -62,11 +66,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
                 transition={{ duration: 1.5, ease: "easeInOut" }}
               />
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-              magni consequuntur enim beatae ea non nihil quaerat itaque quod
-              illo.
-            </p>
+            <p>{data[0].description}</p>
           </motion.div>
         </div>
 
@@ -74,7 +74,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
         <div className={styles.skillsBlock} ref={backendRef}>
           <div className={styles.skillsTitle}>
             <LogoTechno techno={TechnoList.NODEJS} size={62} />
-            <div className={`${styles.label} lexend-deca `}>Backend Dev</div>
+            <div className={`${styles.label} lexend-deca `}>{data[1].name}</div>
           </div>
           <motion.div
             className={`${styles.body} lato`}
@@ -92,14 +92,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({}) => {
                 transition={{ duration: 1.5, ease: "easeInOut" }}
               />
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
-              ratione eius quaerat accusantium itaque quas soluta beatae velit
-              quo at, culpa, iusto possimus libero minus error quia suscipit
-              esse dolore officia praesentium atque. Fuga aliquid quo
-              repudiandae natus, voluptas dicta similique! Eligendi tempora esse
-              porro repudiandae rerum eos temporibus soluta.
-            </p>
+            <p>{data[1].description}</p>
           </motion.div>
         </div>
       </div>
