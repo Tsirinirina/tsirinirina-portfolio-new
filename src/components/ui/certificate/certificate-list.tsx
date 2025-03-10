@@ -1,10 +1,6 @@
 import { DateFormat } from "@/utils/date.utils";
 import styles from "./certificate-list.module.css";
-import data from "./certificats.json";
-import { LiaCertificateSolid } from "react-icons/lia";
-import { CiBookmarkCheck } from "react-icons/ci";
-import { FaCertificate } from "react-icons/fa";
-import { PiCertificate, PiCertificateBold } from "react-icons/pi";
+import { PiCertificate } from "react-icons/pi";
 import { Certificate } from "@/services/certificate/certificat";
 
 interface CertificateListProps {

@@ -1,6 +1,5 @@
 import Flag from "@/components/icons/flag.name";
 import styles from "./language.list.module.css";
-import data from "./skills.json";
 import {} from "react-icons";
 import { Language } from "@/services/language/language";
 

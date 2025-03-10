@@ -1,7 +1,6 @@
 import { Text } from "@/components/text/text";
 import styles from "./language.module.css";
-import data from "./skills.json";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { LiaCertificateSolid } from "react-icons/lia";
 import LanguageList from "./language.list";
 import { Language as LanguageType } from "@/services/language/language";
