@@ -7,7 +7,6 @@ import JobTitle from "../ui/jobtitle/jobtitle";
 import ScrollDown from "../scroll-down/scroll-down";
 import SkillsContainer from "../ui/skills-container/skills-container";
 import { LastWork } from "../ui/last-work/last-work";
-import lastWork from "./last-work.json";
 import Espacer from "../espacer/espacer";
 import CertificatsContainer from "../ui/certificats-container/certificat-container";
 import ProjectsContainer from "../ui/projects-container/projects.container";
@@ -102,7 +101,7 @@ export default function Portfolio() {
               language={languages}
             />
             <Espacer size="lg" />
-            <ProjectsContainer />
+            <ProjectsContainer data={projects} />
             <Espacer size="lg" />
             <ExperienceContainer />
             <Espacer size="lg" />

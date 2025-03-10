@@ -1,24 +1,35 @@
 import { Text } from "@/components/text/text";
 import Project from "../project/project";
 import styles from "./projects.container.module.css";
-import data from "./projects.json";
 import { useEffect, useMemo, useState } from "react";
-import { Project as ProjectModel } from "@/services/project/project";
+import {
+  Project as ProjectTModel,
+  ProjectType,
+} from "@/services/project/project";
 import Loader from "@/components/loader/loader";
 
 interface DataTypes {
   id: number;
   type: string;
+  count: number;
   isActive: boolean;
 }
 
-const ProjectsContainer: React.FC<{}> = ({}) => {
-  const [loading, setLoading] = useState<boolean>(true);
-  const [types, setTypes] = useState<DataTypes[]>([
-    { id: 0, type: "Tous", isActive: true },
-  ]);
+interface ProjectContainerProps {
+  data: ProjectTModel[];
+}
 
-  const [projects, setProjects] = useState<ProjectModel[]>([]);
+const ProjectsContainer: React.FC<ProjectContainerProps> = ({ data }) => {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [projects, setProjects] = useState<ProjectTModel[]>(data);
+  const [types, setTypes] = useState<DataTypes[]>([
+    {
+      id: 0,
+      type: "Tous",
+      count: data.length,
+      isActive: true,
+    },
+  ]);
 
   const enableLink = (id: number) => {
     setLoading(true);
@@ -30,34 +41,42 @@ const ProjectsContainer: React.FC<{}> = ({}) => {
 
   useEffect(() => {
     if (data) {
+      countProjectType();
       setLoading(false);
     }
-    // if (data.types) {
-    //   setTypes([
-    //     { id: 0, type: "Tous", isActive: true },
-    //     ...data.types.map((item, i) => ({
-    //       id: i + 1,
-    //       type: item,
-    //       isActive: false,
-    //     })),
-    //   ]);
-    // }
   }, []);
 
   const filterProject = (item: string) => {
-    // if (projects) {
-    //   setLoading(false);
-    //   if (item === "Tous") {
-    //     setProjects(data.projects);
-    //   } else {
-    //     const projectFiltered = data.projects.filter(
-    //       (project) =>
-    //         project.type.toString().toLowerCase() ===
-    //         item.toString().toLowerCase()
-    //     );
-    //     setProjects(projectFiltered);
-    //   }
-    // }
+    if (data) {
+      setLoading(false);
+      if (item === "Tous") {
+        setProjects(data);
+      } else {
+        const projectFiltered = data.filter(
+          (project) =>
+            project.type.toString().toLowerCase() ===
+            item.toString().toLowerCase()
+        );
+        setProjects(projectFiltered);
+      }
+    }
+  };
+
+  const countProjectType = () => {
+    const countType = data.reduce((acc: any, item) => {
+      acc[item.type] = (acc[item.type] || 0) + 1;
+      return acc;
+    }, {});
+
+    setTypes([
+      { id: 0, type: "Tous", isActive: true, count: data.length },
+      ...Object.keys(countType).map((item, id) => ({
+        id: id + 1,
+        type: item,
+        isActive: false,
+        count: countType[item],
+      })),
+    ]);
   };
 
   return (
