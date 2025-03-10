@@ -21,15 +21,17 @@
 .card3d div {
   position: absolute;
   width: 100%;
-  max-width: 120px;
+  max-width: 60px;
   max-height: 160px;
-  border-radius: 0.5rem;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
   top: 50%;
   left: 50%;
   transform-origin: center center;
   /* animation: animateBrightness 20s linear infinite; */
   transition-duration: 200ms;
   will-change: transform, filter;
+  padding: 5px;
 }
 
 .card3d:hover {
@@ -42,10 +44,10 @@
 
 @keyframes autoRun3d {
   from {
-    transform: perspective(800px) rotateY(0deg);
+    transform: perspective(100vw) rotateY(0deg);
   }
   to {
-    transform: perspective(800px) rotateY(360deg);
+    transform: perspective(100vw) rotateY(360deg);
   }
 }
 

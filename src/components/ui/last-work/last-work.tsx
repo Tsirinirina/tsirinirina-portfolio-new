@@ -1,29 +1,16 @@
 import { Text } from "@/components/text/text";
 import styles from "./last-work.module.css";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { IoLogoReact, IoLogoWordpress } from "react-icons/io5";
-import { TechnoList } from "@/utils/techno.list";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import LogoTechno from "@/components/logo-techno/logo-techno";
 import PreviewLink from "@/components/preview-link/preview-link";
+import { Project } from "@/services/project/project";
 
 interface LastWorkProps {
-  projectTitle: string;
-  projetDescription: string;
-  clientInformation?: string;
-  technoList: string[];
-  startDate?: string;
-  publishDate?: string;
+  data: Project;
 }
 
-export const LastWork: React.FC<LastWorkProps> = ({
-  projectTitle,
-  projetDescription,
-  technoList,
-  clientInformation,
-  startDate,
-  publishDate,
-}) => {
+export const LastWork: React.FC<LastWorkProps> = ({ data }) => {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: true });
 
@@ -55,11 +42,11 @@ export const LastWork: React.FC<LastWorkProps> = ({
             fontSize="28px"
             className={`lexend-deca ${styles.subtitle}`}
           >
-            {projectTitle}
+            {data.title}
           </Text.Subtitle>
           <div className={styles.info}>
-            <div className={styles.clientInfo}>{clientInformation}</div>
-            <div className={styles.date}>{publishDate}</div>
+            <div className={styles.clientInfo}>{data.clientInformation}</div>
+            <div className={styles.date}>{data.publishDate}</div>
           </div>
         </div>
 
@@ -69,11 +56,11 @@ export const LastWork: React.FC<LastWorkProps> = ({
           fontSize="16px"
           className={`lato ${styles.description}`}
         >
-          {projetDescription}
+          {data.description}
         </Text.Description>
         <div className={styles.footer}>
           <div className={styles.techno}>
-            {technoList.map((item, _i) => (
+            {data.technoList.map((item, _i) => (
               <motion.div
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
@@ -89,7 +76,7 @@ export const LastWork: React.FC<LastWorkProps> = ({
             ))}
           </div>
           <div className={styles.workLink}>
-            <PreviewLink previewUrl="https://preview-ap-solutions.itras.mg/" />
+            <PreviewLink previewUrl={data.link} />
           </div>
         </div>
       </div>

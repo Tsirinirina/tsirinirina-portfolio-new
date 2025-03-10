@@ -1,7 +1,7 @@
 import apiClient from "@/utils/api.clients";
 import { Project, ProjectDTO } from "./project";
 
-export const GetAllProjectData = async (): Promise<Project | any> => {
+export const GetAllProjectData = async (): Promise<Project[] | any> => {
   try {
     const { data } = await apiClient.get("/project");
     return data;

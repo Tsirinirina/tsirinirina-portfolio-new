@@ -34,8 +34,10 @@ import {
   SiWordpress,
   SiNestjs,
   SiFigma,
+  SiGit,
+  SiGithubactions,
 } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
+import { RiNextjsFill, RiJavaFill } from "react-icons/ri";
 
 interface LogoTechnoProps {
   techno: string;
@@ -122,6 +124,10 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
         return "#21759B";
       case TechnoList.WEBPACK:
         return "#8DD6F9";
+      case TechnoList.JAVA:
+        return "#8DD6F9";
+      case TechnoList.GITHUB_ACTIONS:
+        return "#8DD6F9";
       default:
         return "#000000";
     }
@@ -194,6 +200,10 @@ const LogoTechno: React.FC<LogoTechnoProps> = ({
       return <SiWordpress className={className} size={size} color={color} />;
     case TechnoList.WEBPACK:
       return <SiWebpack className={className} size={size} color={color} />;
+    case TechnoList.JAVA:
+      return <RiJavaFill className={className} size={size} color={color} />;
+    case TechnoList.GIT:
+      return <SiGit className={className} size={size} color={color} />;
     default:
       return <IoLogoAndroid className={className} size={size} color={color} />;
   }

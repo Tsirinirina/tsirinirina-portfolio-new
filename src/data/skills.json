@@ -80,78 +80,7 @@
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
-  {
-    "id": "f954e268-878f-4304-aa91-09371782e907",
-    "category": "DATABASE",
-    "name": "PostGres",
-    "percentage": 30,
-    "iconName": "POSTGRESQL",
-    "ranking": "Débutant",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "ac61f45f-d435-42e4-adda-525d2ea9be83",
-    "category": "VERSION_CONTROL",
-    "name": "Git",
-    "percentage": 85,
-    "iconName": "GIT",
-    "ranking": "Avancée",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "3936edcf-2658-48bc-9f39-a21752c40772",
-    "category": "VERSION_CONTROL",
-    "name": "GitHub",
-    "percentage": 85,
-    "iconName": "GITHUB_ACTIONS",
-    "ranking": "Avancée",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "1442f45d-d435-42e4-adda-525d2ea9be83",
-    "category": "CLOUD",
-    "name": "AWS",
-    "percentage": 0,
-    "iconName": "AWS",
-    "ranking": "Débutant",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "aba37bec-ffe4-4060-a58d-9a9f388f551b",
-    "category": "CLOUD",
-    "name": "Azure",
-    "percentage": 0,
-    "iconName": "AZURE",
-    "ranking": "Débutant",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "1cd0436d-bae6-41bf-8e72-f9969d05ee1f",
-    "category": "Language",
-    "name": "Malagasy",
-    "percentage": 80,
-    "iconName": "MALAGASY",
-    "ranking": "Langue maternelle",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "7e2ebe56-7cc4-4380-9083-7bc6fafe3b0c",
-    "category": "Language",
-    "name": "French",
-    "percentage": 65,
-    "iconName": "FRENCH",
-    "ranking": "Professionnel, Conversationnel",
-    "createdAt": "2025-02-12T08:23:10Z"
-  },
-  {
-    "id": "13c9578d-8ae8-47f8-b501-568047ffe816",
-    "category": "PROGRAMMING_LANGUAGE",
-    "name": "C++",
-    "percentage": 0,
-    "iconName": "CPP",
-    "ranking": "Débutant",
-    "createdAt": "2025-01-12T08:23:10Z"
-  },
+
   {
     "id": "c610a81d-29e2-4693-9561-ff4c7b809ada",
     "category": "FRONT_END",
@@ -195,15 +124,6 @@
     "percentage": 50,
     "iconName": "PYTHON",
     "ranking": "Intermédiaire",
-    "createdAt": "2020-05-12T08:23:10Z"
-  },
-  {
-    "id": "170f82dd-9df1-4f24-ae6c-05d98c796eec",
-    "category": "Language",
-    "name": "English",
-    "percentage": 40,
-    "iconName": "ENGLISH",
-    "ranking": "Professionnel, Débutant",
     "createdAt": "2020-05-12T08:23:10Z"
   }
 ]

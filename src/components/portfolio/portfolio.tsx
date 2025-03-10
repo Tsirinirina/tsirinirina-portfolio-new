@@ -16,53 +16,37 @@ import InfoContainer from "../ui/info-container/info-container";
 import { useEffect, useState } from "react";
 import { Personal } from "@/services/personal/personal";
 import { GetPersonalData } from "@/services/personal/personal.service";
-import PageLoader from "../loader/page.loader";
 import ClassicLoader from "../loader/classic.loader";
 import { GetAllCertificate } from "@/services/certificate/certificate.service";
 import { Certificate } from "@/services/certificate/certificat";
-import InfiniteScrollCarousel from "../infinite-scroll/infinite-scroll-carousel";
-import {
-  IoLogoJavascript,
-  IoLogoReact,
-  IoLogoPython,
-  IoLogoNodejs,
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoAngular,
-} from "react-icons/io5";
 import InfiniteCarousel from "../infinite-carousel/infinite-carousel";
 import { Speciality } from "@/services/speciality/speciality";
 import { GetAllSpeciality } from "@/services/speciality/speciality.service";
-import Carousel from "../carousel/carousel";
 import { Skill } from "@/services/skills/skills";
 import { GetAllSkill } from "@/services/skills/skills.service";
+import { GetAllProjectData } from "@/services/project/project.service";
+import { Project } from "@/services/project/project";
 
 export default function Portfolio() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [personalData, setPersonalData] = useState<Personal>(Object());
-  const [certificateData, setCertificateData] = useState<Certificate[]>([]);
-  const [specialityData, setSpecialityData] = useState<Speciality[]>([]);
-  const [skillsData, setSkillsData] = useState<Skill[]>([]);
-  const items = [
-    <IoLogoJavascript key="js" className="text-yellow-400" size={62} />,
-    <IoLogoReact key="react" className="text-blue-400" size={62} />,
-    <IoLogoPython key="python" className="text-green-500" size={62} />,
-    <IoLogoNodejs key="node" className="text-green-600" size={62} />,
-    <IoLogoHtml5 key="html" className="text-orange-500" size={62} />,
-    <IoLogoCss3 key="css" className="text-blue-500" size={62} />,
-    <IoLogoAngular key="angular" className="text-red-500" size={62} />,
-  ];
+  const [personal, setPersonal] = useState<Personal>(Object());
+  const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [specialities, setSpecialities] = useState<Speciality[]>([]);
+  const [skills, setSkills] = useState<Skill[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   const getAllData = async () => {
     try {
       const personalData = await GetPersonalData();
-      setPersonalData(personalData);
+      setPersonal(personalData);
       const certificateData = await GetAllCertificate();
-      setCertificateData(certificateData);
+      setCertificates(certificateData);
       const specialityData = await GetAllSpeciality();
-      setSpecialityData(specialityData);
-      const skillData = await GetAllSkill();
-      setSkillsData(skillData);
+      setSpecialities(specialityData);
+      const skillsData = await GetAllSkill();
+      setSkills(skillsData);
+      const projectsData = await GetAllProjectData();
+      setProjects(projectsData);
       if (personalData && certificateData) setIsLoading(false);
     } catch (error) {
       setIsLoading(true);
@@ -89,14 +73,14 @@ export default function Portfolio() {
           {/* Main Content */}
           <main className={styles.main}>
             <section className={styles.banner} id="banner">
-              <JobTitle title={personalData.jobTitle} />
-              <BannerName name={personalData.firstname} />
+              <JobTitle title={personal.jobTitle} />
+              <BannerName name={personal.firstname} />
               <div className={styles.scrollDownContainer}>
                 <ScrollDown />
               </div>
             </section>
-            <SkillsContainer data={specialityData} />
-            <InfiniteCarousel items={skillsData} />
+            <SkillsContainer data={specialities} />
+            <InfiniteCarousel items={skills} />
             {/* <Carousel /> */}
             {/* <InfiniteScrollCarousel
               items={items}
@@ -104,14 +88,7 @@ export default function Portfolio() {
               scrollSpeed={2000}
               className="h-32"
             /> */}
-            <LastWork
-              projectTitle={lastWork.title}
-              projetDescription={lastWork.description}
-              technoList={lastWork.technoList}
-              clientInformation={lastWork.clientInformation}
-              publishDate={lastWork.publishDate}
-              startDate={lastWork.startDate}
-            />
+            <LastWork data={projects[0]} />
             <Espacer size="lg" />
             <CertificatsContainer />
             <Espacer size="lg" />
