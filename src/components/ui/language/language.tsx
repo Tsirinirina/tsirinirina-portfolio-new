@@ -4,10 +4,13 @@ import data from "./skills.json";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaCertificateSolid } from "react-icons/lia";
 import LanguageList from "./language.list";
+import { Language as LanguageType } from "@/services/language/language";
 
-interface LanguageProps {}
+interface LanguageProps {
+  data: LanguageType[];
+}
 
-const Language: React.FC<LanguageProps> = ({}) => {
+const Language: React.FC<LanguageProps> = ({ data }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 1.1, y: -50 }}
@@ -35,7 +38,7 @@ const Language: React.FC<LanguageProps> = ({}) => {
         </Text.Title>
       </div>
       <div className={`lato ${styles.content}`}>
-        <LanguageList />
+        <LanguageList data={data} />
       </div>
     </motion.div>
   );

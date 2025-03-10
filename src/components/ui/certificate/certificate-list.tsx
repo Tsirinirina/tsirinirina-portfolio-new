@@ -5,10 +5,16 @@ import { LiaCertificateSolid } from "react-icons/lia";
 import { CiBookmarkCheck } from "react-icons/ci";
 import { FaCertificate } from "react-icons/fa";
 import { PiCertificate, PiCertificateBold } from "react-icons/pi";
-const CertificateList = () => {
+import { Certificate } from "@/services/certificate/certificat";
+
+interface CertificateListProps {
+  data: Certificate[];
+}
+
+const CertificateList: React.FC<CertificateListProps> = ({ data }) => {
   return (
     <div>
-      {data.certificats.map((i, _index) => (
+      {data.map((i, _index) => (
         <li key={`certificate_${_index}`} className={styles.list}>
           <div className={`${styles.header}`}>
             <div className={`lexend-deca ${styles.name}`}>

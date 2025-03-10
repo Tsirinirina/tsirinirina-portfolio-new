@@ -10,6 +10,7 @@ export enum Entity {
   "Socials",
   "Urls",
   "Speciality",
+  "Language",
 }
 
 const fileName = (entity: Entity) => {
@@ -30,6 +31,8 @@ const fileName = (entity: Entity) => {
       return "urls.json";
     case Entity.Speciality:
       return "speciality.json";
+    case Entity.Language:
+      return "language.json";
   }
 };
 export const readFile = (entity: Entity) => {

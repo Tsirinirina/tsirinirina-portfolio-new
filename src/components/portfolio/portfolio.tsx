@@ -26,6 +26,8 @@ import { Skill } from "@/services/skills/skills";
 import { GetAllSkill } from "@/services/skills/skills.service";
 import { GetAllProjectData } from "@/services/project/project.service";
 import { Project } from "@/services/project/project";
+import { Language } from "@/services/language/language";
+import { GetAllLanguage } from "@/services/language/language.service";
 
 export default function Portfolio() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -34,6 +36,7 @@ export default function Portfolio() {
   const [specialities, setSpecialities] = useState<Speciality[]>([]);
   const [skills, setSkills] = useState<Skill[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [languages, setLanguages] = useState<Language[]>([]);
 
   const getAllData = async () => {
     try {
@@ -47,7 +50,18 @@ export default function Portfolio() {
       setSkills(skillsData);
       const projectsData = await GetAllProjectData();
       setProjects(projectsData);
-      if (personalData && certificateData) setIsLoading(false);
+      const languageData = await GetAllLanguage();
+      setLanguages(languageData);
+      if (
+        personalData &&
+        certificateData &&
+        specialityData &&
+        projectsData &&
+        skillsData &&
+        projectsData &&
+        languageData
+      )
+        setIsLoading(false);
     } catch (error) {
       setIsLoading(true);
       console.error("Erreur lors de la récupération des données :", error);
@@ -81,16 +95,12 @@ export default function Portfolio() {
             </section>
             <SkillsContainer data={specialities} />
             <InfiniteCarousel items={skills} />
-            {/* <Carousel /> */}
-            {/* <InfiniteScrollCarousel
-              items={items}
-              autoScroll={true}
-              scrollSpeed={2000}
-              className="h-32"
-            /> */}
             <LastWork data={projects[0]} />
             <Espacer size="lg" />
-            <CertificatsContainer />
+            <CertificatsContainer
+              certificate={certificates}
+              language={languages}
+            />
             <Espacer size="lg" />
             <ProjectsContainer />
             <Espacer size="lg" />

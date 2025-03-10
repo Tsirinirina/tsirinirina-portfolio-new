@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Malagasy",
+    "ranking": "Langue maternelle",
+    "percentage": "80%",
+    "flagName": "MDG"
+  },
+  {
+    "name": "French",
+    "ranking": "Professionnel, Conversationnel",
+    "percentage": "65%",
+    "flagName": "FR"
+  },
+  {
+    "name": "English",
+    "ranking": "Professionnel, Débutant",
+    "percentage": "40%",
+    "flagName": "USA"
+  }
+]

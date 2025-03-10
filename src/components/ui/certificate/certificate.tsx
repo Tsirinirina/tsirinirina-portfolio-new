@@ -4,10 +4,13 @@ import styles from "./certificat.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { LiaCertificateSolid } from "react-icons/lia";
 import CertificateList from "./certificate-list";
+import { Certificate as CertificateType } from "@/services/certificate/certificat";
 
-interface CertificateProps {}
+interface CertificateProps {
+  data: CertificateType[];
+}
 
-const Certificate: React.FC<CertificateProps> = ({}) => {
+const Certificate: React.FC<CertificateProps> = ({ data }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 1.1, y: -50 }}
@@ -35,7 +38,7 @@ const Certificate: React.FC<CertificateProps> = ({}) => {
         </Text.Title>
       </div>
       <div className={`lato ${styles.content}`}>
-        <CertificateList />
+        <CertificateList data={data} />
       </div>
     </motion.div>
   );

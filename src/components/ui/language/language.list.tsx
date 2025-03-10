@@ -2,10 +2,16 @@ import Flag from "@/components/icons/flag.name";
 import styles from "./language.list.module.css";
 import data from "./skills.json";
 import {} from "react-icons";
-const LanguageList = () => {
+import { Language } from "@/services/language/language";
+
+interface LanguageListProps {
+  data: Language[];
+}
+
+const LanguageList: React.FC<LanguageListProps> = ({ data }) => {
   return (
     <div className={styles.content}>
-      {data.languageSkills.map((i, _index) => (
+      {data.map((i, _index) => (
         <li key={`language_${_index}`} className={`${styles.list}`}>
           <div className={`${styles.flag}`}>
             <Flag>{i.flagName}</Flag>
