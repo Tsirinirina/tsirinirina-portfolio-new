@@ -27,7 +27,6 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({ data }) => {
     once: true,
     margin: "-50px",
   });
-  console.log("data==", data);
 
   return (
     <div className={styles.container} id="myskills">

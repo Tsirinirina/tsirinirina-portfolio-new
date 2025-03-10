@@ -33,20 +33,24 @@ import {
 import InfiniteCarousel from "../infinite-carousel/infinite-carousel";
 import { Speciality } from "@/services/speciality/speciality";
 import { GetAllSpeciality } from "@/services/speciality/speciality.service";
+import Carousel from "../carousel/carousel";
+import { Skill } from "@/services/skills/skills";
+import { GetAllSkill } from "@/services/skills/skills.service";
 
 export default function Portfolio() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [personalData, setPersonalData] = useState<Personal>(Object());
   const [certificateData, setCertificateData] = useState<Certificate[]>([]);
   const [specialityData, setSpecialityData] = useState<Speciality[]>([]);
+  const [skillsData, setSkillsData] = useState<Skill[]>([]);
   const items = [
-    <IoLogoJavascript key="js" className="text-yellow-400" size={40} />,
-    <IoLogoReact key="react" className="text-blue-400" size={40} />,
-    <IoLogoPython key="python" className="text-green-500" size={40} />,
-    <IoLogoNodejs key="node" className="text-green-600" size={40} />,
-    <IoLogoHtml5 key="html" className="text-orange-500" size={40} />,
-    <IoLogoCss3 key="css" className="text-blue-500" size={40} />,
-    <IoLogoAngular key="angular" className="text-red-500" size={40} />,
+    <IoLogoJavascript key="js" className="text-yellow-400" size={62} />,
+    <IoLogoReact key="react" className="text-blue-400" size={62} />,
+    <IoLogoPython key="python" className="text-green-500" size={62} />,
+    <IoLogoNodejs key="node" className="text-green-600" size={62} />,
+    <IoLogoHtml5 key="html" className="text-orange-500" size={62} />,
+    <IoLogoCss3 key="css" className="text-blue-500" size={62} />,
+    <IoLogoAngular key="angular" className="text-red-500" size={62} />,
   ];
 
   const getAllData = async () => {
@@ -57,6 +61,8 @@ export default function Portfolio() {
       setCertificateData(certificateData);
       const specialityData = await GetAllSpeciality();
       setSpecialityData(specialityData);
+      const skillData = await GetAllSkill();
+      setSkillsData(skillData);
       if (personalData && certificateData) setIsLoading(false);
     } catch (error) {
       setIsLoading(true);
@@ -90,7 +96,8 @@ export default function Portfolio() {
               </div>
             </section>
             <SkillsContainer data={specialityData} />
-            <InfiniteCarousel items={items} />
+            <InfiniteCarousel items={skillsData} />
+            {/* <Carousel /> */}
             {/* <InfiniteScrollCarousel
               items={items}
               autoScroll={true}

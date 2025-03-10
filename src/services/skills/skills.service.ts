@@ -1,9 +1,9 @@
 import apiClient from "@/utils/api.clients";
 import { Skill, SkillDTO } from "./skills";
 
-export const GetAllCertificate = async (): Promise<Skill | any> => {
+export const GetAllSkill = async (): Promise<Skill | any> => {
   try {
-    const data = await apiClient.get("/skill");
+    const { data } = await apiClient.get("/skill");
     return data;
   } catch (error: any) {
     console.error(
@@ -14,7 +14,7 @@ export const GetAllCertificate = async (): Promise<Skill | any> => {
   }
 };
 
-export const GetCertificateById = async (id: string): Promise<Skill | any> => {
+export const GetSkillById = async (id: string): Promise<Skill | any> => {
   try {
     const data = await apiClient.get(`/skill/${id}`);
     return data;
@@ -27,7 +27,7 @@ export const GetCertificateById = async (id: string): Promise<Skill | any> => {
   }
 };
 
-export const CreatCertificate = async (newData: SkillDTO) => {
+export const CreatSkill = async (newData: SkillDTO) => {
   try {
     const data = await apiClient.post("/skill", newData);
     return data;
@@ -40,10 +40,7 @@ export const CreatCertificate = async (newData: SkillDTO) => {
   }
 };
 
-export const UpdateCertificateData = async (
-  id: string,
-  updatedData: SkillDTO
-) => {
+export const UpdateSkillData = async (id: string, updatedData: SkillDTO) => {
   try {
     const data = await apiClient.patch(`/skill/${id}`, updatedData);
     return data;
@@ -56,7 +53,7 @@ export const UpdateCertificateData = async (
   }
 };
 
-export const DeleteCertificateData = async (id: string) => {
+export const DeleteSkillData = async (id: string) => {
   try {
     const data = await apiClient.delete(`/skill/${id}`);
     return data;

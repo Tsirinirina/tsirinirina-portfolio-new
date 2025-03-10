@@ -4,6 +4,7 @@
     "category": "FRONT_END",
     "name": "ReactJs",
     "percentage": 70,
+    "iconName": "REACTJS",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -12,6 +13,7 @@
     "category": "FRONT_END",
     "name": "NextJs",
     "percentage": 80,
+    "iconName": "NEXTJS",
     "ranking": "Avancée",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -20,6 +22,7 @@
     "category": "FRONT_END",
     "name": "AngularJS",
     "percentage": 23,
+    "iconName": "ANGULAR",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -28,6 +31,7 @@
     "category": "BACK_END",
     "name": "Node.js",
     "percentage": 65,
+    "iconName": "NODEJS",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -36,6 +40,7 @@
     "category": "BACK_END",
     "name": "NestJs",
     "percentage": 65,
+    "iconName": "NESTJS",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -44,6 +49,7 @@
     "category": "BACK_END",
     "name": "Laravel",
     "percentage": 45,
+    "iconName": "LARAVEL",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -52,6 +58,7 @@
     "category": "BACK_END",
     "name": "Symfony 5,6",
     "percentage": 45,
+    "iconName": "SYMFONY",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -60,6 +67,7 @@
     "category": "DATABASE",
     "name": "MySQL",
     "percentage": 80,
+    "iconName": "MYSQL",
     "ranking": "Avancée",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -68,6 +76,7 @@
     "category": "DATABASE",
     "name": "MongoDB",
     "percentage": 70,
+    "iconName": "MONGODB",
     "ranking": "Intermédiaire",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -76,6 +85,7 @@
     "category": "DATABASE",
     "name": "PostGres",
     "percentage": 30,
+    "iconName": "POSTGRESQL",
     "ranking": "Débutant",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -84,6 +94,7 @@
     "category": "VERSION_CONTROL",
     "name": "Git",
     "percentage": 85,
+    "iconName": "GIT",
     "ranking": "Avancée",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -92,14 +103,16 @@
     "category": "VERSION_CONTROL",
     "name": "GitHub",
     "percentage": 85,
+    "iconName": "GITHUB_ACTIONS",
     "ranking": "Avancée",
     "createdAt": "2025-02-12T08:23:10Z"
   },
   {
-    "id": "1442f55d-3d92-424a-9a4d-88c4632c7b38",
+    "id": "1442f45d-d435-42e4-adda-525d2ea9be83",
     "category": "CLOUD",
     "name": "AWS",
     "percentage": 0,
+    "iconName": "AWS",
     "ranking": "Débutant",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -108,6 +121,7 @@
     "category": "CLOUD",
     "name": "Azure",
     "percentage": 0,
+    "iconName": "AZURE",
     "ranking": "Débutant",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -116,6 +130,7 @@
     "category": "Language",
     "name": "Malagasy",
     "percentage": 80,
+    "iconName": "MALAGASY",
     "ranking": "Langue maternelle",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -124,6 +139,7 @@
     "category": "Language",
     "name": "French",
     "percentage": 65,
+    "iconName": "FRENCH",
     "ranking": "Professionnel, Conversationnel",
     "createdAt": "2025-02-12T08:23:10Z"
   },
@@ -132,6 +148,7 @@
     "category": "PROGRAMMING_LANGUAGE",
     "name": "C++",
     "percentage": 0,
+    "iconName": "CPP",
     "ranking": "Débutant",
     "createdAt": "2025-01-12T08:23:10Z"
   },
@@ -140,6 +157,7 @@
     "category": "FRONT_END",
     "name": "HTML",
     "percentage": 90,
+    "iconName": "HTML",
     "ranking": "Expert",
     "createdAt": "2025-01-10T08:23:10Z"
   },
@@ -148,6 +166,7 @@
     "category": "FRONT_END",
     "name": "CSS",
     "percentage": 85,
+    "iconName": "CSS",
     "ranking": "Avancée",
     "createdAt": "2024-10-12T08:23:10Z"
   },
@@ -156,6 +175,7 @@
     "category": "PROGRAMMING_LANGUAGE",
     "name": "JavaScript",
     "percentage": 80,
+    "iconName": "JAVASCRIPT",
     "ranking": "Avancée",
     "createdAt": "2024-02-12T08:23:10Z"
   },
@@ -164,6 +184,7 @@
     "category": "PROGRAMMING_LANGUAGE",
     "name": "Java",
     "percentage": 40,
+    "iconName": "JAVA",
     "ranking": "Intermédiaire",
     "createdAt": "2023-02-12T08:23:10Z"
   },
@@ -172,6 +193,7 @@
     "category": "PROGRAMMING_LANGUAGE",
     "name": "Python",
     "percentage": 50,
+    "iconName": "PYTHON",
     "ranking": "Intermédiaire",
     "createdAt": "2020-05-12T08:23:10Z"
   },
@@ -180,6 +202,7 @@
     "category": "Language",
     "name": "English",
     "percentage": 40,
+    "iconName": "ENGLISH",
     "ranking": "Professionnel, Débutant",
     "createdAt": "2020-05-12T08:23:10Z"
   }

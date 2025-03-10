@@ -1,7 +1,10 @@
+import { TechnoList } from "@/utils/techno.list";
+
 export interface Skill {
   id: string;
   name: string;
   category: SkillsCategory;
+  iconName: TechnoList;
   percentage: number;
   ranking: string;
   createdAt: string;
@@ -19,6 +22,7 @@ export enum SkillsCategory {
 export interface SkillDTO {
   category?: SkillsCategory;
   name?: string;
+  iconName?: TechnoList;
   percentage?: number;
   ranking?: string;
 }
